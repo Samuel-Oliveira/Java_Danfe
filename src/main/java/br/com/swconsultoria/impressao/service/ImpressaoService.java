@@ -3,6 +3,7 @@ package br.com.swconsultoria.impressao.service;
 import br.com.swconsultoria.impressao.model.Impressao;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRXmlDataSource;
+import net.sf.jasperreports.view.JasperViewer;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -58,6 +59,20 @@ public class ImpressaoService {
     public static void impressaoHtml(Impressao impressao, String destinoHtml) throws JRException, ParserConfigurationException, IOException, SAXException {
         JasperPrint jasperPrint = geraImpressao(impressao);
         JasperExportManager.exportReportToHtmlFile(jasperPrint, destinoHtml);
+
+    }
+
+    /**
+     * Cria a impressão em um preview, use setVisible(true) para mostrar a janela
+     * @param impressao
+     * @throws JRException
+     * @throws ParserConfigurationException
+     * @throws IOException
+     * @throws SAXException
+     */
+    public static JasperViewer impressaoPreview(Impressao impressao) throws JRException, ParserConfigurationException, IOException, SAXException {
+        JasperPrint jasperPrint = geraImpressao(impressao);
+        return new JasperViewer(jasperPrint, true);
     }
 
     private static JasperPrint geraImpressao(Impressao impressao) throws IOException, SAXException, ParserConfigurationException, JRException {
