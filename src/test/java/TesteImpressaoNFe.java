@@ -6,7 +6,6 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class TesteImpressaoNFe {
 
@@ -22,16 +21,7 @@ public class TesteImpressaoNFe {
             //Faz a impressão em pdf File
             impressaoPdfArquivo(impressao);
             System.out.println("Impressão Pdf Arquivo OK");
-
-            //Faz a impressão em pdf byte
-            impressao = ImpressaoUtil.impressaoPadraoNFe(xml);
-            System.out.println("Impressão Pdf Byte OK: "+ Arrays.toString(impressaoPdfByte(impressao)));
-
-            //Faz a impressão em pdf Html
-            impressao = ImpressaoUtil.impressaoPadraoNFe(xml);
-            impressaoHtml(impressao);
-            System.out.println("Impressão Pdf Html OK");
-        }catch (Exception e){
+        } catch (Exception e) {
             //Trate seus erros aqui
             e.printStackTrace();
         }
@@ -39,13 +29,5 @@ public class TesteImpressaoNFe {
 
     private static void impressaoPdfArquivo(Impressao impressao) throws IOException, JRException, ParserConfigurationException, SAXException {
         ImpressaoService.impressaoPdfArquivo(impressao, "/d/teste/teste-nfe.pdf");
-    }
-
-    private static byte[] impressaoPdfByte(Impressao impressao) throws IOException, JRException, ParserConfigurationException, SAXException {
-        return ImpressaoService.impressaoPdfByte(impressao);
-    }
-
-    private static void impressaoHtml(Impressao impressao) throws IOException, JRException, ParserConfigurationException, SAXException {
-        ImpressaoService.impressaoHtml(impressao, "/d/teste/teste-nfe.html");
     }
 }

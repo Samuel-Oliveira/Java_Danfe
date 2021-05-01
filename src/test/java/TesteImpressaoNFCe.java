@@ -6,7 +6,6 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class TesteImpressaoNFCe {
 
@@ -18,21 +17,12 @@ public class TesteImpressaoNFCe {
             //Informe a Url de Consulta do NFCe de seu Estado
             String urlConsulta = "www.sefaznet.ac.gov.br/nfce/consulta";
             //Aqui está pegando o Layout Padrão
-            Impressao impressao = ImpressaoUtil.impressaoPadraoNFCe(xml,urlConsulta);
+            Impressao impressao = ImpressaoUtil.impressaoPadraoNFCe(xml, urlConsulta);
 
             //Faz a impressão em pdf File
             impressaoPdfArquivo(impressao);
             System.out.println("Impressão Pdf Arquivo OK");
-
-            //Faz a impressão em pdf byte
-            impressao = ImpressaoUtil.impressaoPadraoNFCe(xml,urlConsulta);
-            System.out.println("Impressão Pdf Byte OK: "+ Arrays.toString(impressaoPdfByte(impressao)));
-
-            //Faz a impressão em pdf Html
-            impressao = ImpressaoUtil.impressaoPadraoNFCe(xml,urlConsulta);
-            impressaoHtml(impressao);
-            System.out.println("Impressão Pdf Html OK");
-        }catch (Exception e){
+        } catch (Exception e) {
             //Trate seus erros aqui
             e.printStackTrace();
         }
@@ -42,11 +32,4 @@ public class TesteImpressaoNFCe {
         ImpressaoService.impressaoPdfArquivo(impressao, "/d/teste/teste-nfce.pdf");
     }
 
-    private static byte[] impressaoPdfByte(Impressao impressao) throws IOException, JRException, ParserConfigurationException, SAXException {
-        return ImpressaoService.impressaoPdfByte(impressao);
-    }
-
-    private static void impressaoHtml(Impressao impressao) throws IOException, JRException, ParserConfigurationException, SAXException {
-        ImpressaoService.impressaoHtml(impressao, "/d/teste/teste-nfce.html");
-    }
 }
