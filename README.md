@@ -35,4 +35,4 @@ Veja a Wiki https://github.com/Samuel-Oliveira/Java_Danfe/wiki, para ter um Tuto
 ________________________________________________________________________________________________
 
 # Histórico de Versões
-- Clique [aqui](https://github.com/wendel086/Java_Danfe#CHANGELOG.md) para o histórico de versões.
+- Clique [aqui](https://github.com/wendel086/Java_Danfe/blob/master/CHANGELOG.md) para o histórico de versões.
