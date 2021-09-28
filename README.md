@@ -34,12 +34,5 @@ Veja a Wiki https://github.com/Samuel-Oliveira/Java_Danfe/wiki, para ter um Tuto
 
 ________________________________________________________________________________________________
 
-# Historico de Versões
-
-## v1.0 - 01/05/2021
-- Versão Inicial da Biblioteca
-- Adicionado impressão Padrão NFe
-- Adicionado impressão Padrão NFCe
-
-<img src="https://raw.githubusercontent.com/Samuel-Oliveira/Java_Danfe/master/jetbrains.png" width="200">
-Thanks to JetBrains for supporting this project! https://www.jetbrains.com/?from=Java_NFe
+# Histórico de Versões
+- Clique [aqui](https://github.com/wendel086/Java_Danfe#CHANGELOG.md) para o histórico de versões.
