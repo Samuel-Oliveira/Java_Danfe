@@ -36,3 +36,6 @@ ________________________________________________________________________________
 
 # Histórico de Versões
 - Clique [aqui](https://github.com/wendel086/Java_Danfe/blob/master/CHANGELOG.md) para o histórico de versões.
+
+<img src="https://raw.githubusercontent.com/Samuel-Oliveira/Java_Danfe/master/jetbrains.png" width="200">
+Thanks to JetBrains for supporting this project! https://www.jetbrains.com/?from=Java_NFe
