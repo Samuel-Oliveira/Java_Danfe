@@ -2,9 +2,10 @@
 Biblioteca para impressão de Documentos Fiscais
 
 ## Dúvidas, Sugestões ou Consultoria
-Entre no Discord do Projeto: https://discord.gg/ZXpqnaV
+[![Java Brasil](https://discordapp.com/api/guilds/519583346066587676/widget.png?style=banner2)](https://discord.gg/ZXpqnaV)
 
-## Gostou do Projeto? Dê sua colaboração pelo Pix: 01713390108 <img src="https://swconsultoria.com.br/pix.png" width="200">
+## Gostou do Projeto? Dê sua colaboração pelo Pix: 01713390108
+<img src="https://swconsultoria.com.br/pix.png" width="200">
 
 Para Iniciar : 
 - Caso use Libs baixe o java-danfe-1.0.jar (https://github.com/Samuel-Oliveira/Java_Danfe/raw/master/java-danfe-1.0.jar) e o adicione às bibliotecas de Seu Projeto.
