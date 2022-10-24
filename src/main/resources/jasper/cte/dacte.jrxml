@@ -1,0 +1,2300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.0.final using JasperReports Library version 6.12.1-ac0eebdb29e4c0985457bab279a6db744d661530  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DACTE" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="77396255-000d-47de-a0d4-28e629551bba">
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="24"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="965"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cte.xml"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="511"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="478"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Comp" uuid="b3cc83ef-b559-4704-9c2d-35585b6627b6">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="xNome" class="java.lang.String">
+			<fieldDescription><![CDATA[xNome]]></fieldDescription>
+		</field>
+		<field name="vComp" class="java.lang.String">
+			<fieldDescription><![CDATA[vComp]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="Logotipo" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[Local onde está  a imagem do logo da empresa.]]></parameterDescription>
+	</parameter>
+	<parameter name="protocoloEncerramento" class="java.lang.String"/>
+	<parameter name="qtdVolumes" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="protocoloCancelamento" class="java.lang.String"/>
+	<parameter name="SubPrestacaoServico" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="SubDocumentosOriginariosNF" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="SubDocumentosOriginariosNFe" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="SubDocumentosOriginariosOutros" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="SubVeiculosNovos" class="java.io.InputStream" isForPrompting="false"/>
+	<queryString language="XPath">
+		<![CDATA[/cteProc/CTe/infCte/infCTeNorm]]>
+	</queryString>
+	<field name="emit_CNPJ" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/CNPJ]]></fieldDescription>
+	</field>
+	<field name="emit_IE" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/IE]]></fieldDescription>
+	</field>
+	<field name="emit_xNome" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/xNome]]></fieldDescription>
+	</field>
+	<field name="emit_xFant" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/xFant]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_xLgr" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/enderEmit/xLgr]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_nro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/enderEmit/nro]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_xBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/enderEmit/xBairro]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_xMun" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/enderEmit/xMun]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_CEP" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/enderEmit/CEP]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_UF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/enderEmit/UF]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_fone" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/enderEmit/fone]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_email" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/emit/enderEmit/email]]></fieldDescription>
+	</field>
+	<field name="dest_CNPJ" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/CNPJ]]></fieldDescription>
+	</field>
+	<field name="dest_CPF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/CPF]]></fieldDescription>
+	</field>
+	<field name="dest_IE" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/IE]]></fieldDescription>
+	</field>
+	<field name="dest_xNome" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/xNome]]></fieldDescription>
+	</field>
+	<field name="dest_xFant" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/xFant]]></fieldDescription>
+	</field>
+	<field name="dest_fone" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/fone]]></fieldDescription>
+	</field>
+	<field name="dest_enderDest_xLgr" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/enderDest/xLgr]]></fieldDescription>
+	</field>
+	<field name="dest_enderDest_nro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/enderDest/nro]]></fieldDescription>
+	</field>
+	<field name="dest_enderDest_xCpl" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/enderDest/xCpl]]></fieldDescription>
+	</field>
+	<field name="dest_enderDest_xBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/enderDest/xBairro]]></fieldDescription>
+	</field>
+	<field name="dest_enderDest_xMun" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/enderDest/xMun]]></fieldDescription>
+	</field>
+	<field name="dest_enderDest_CEP" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/enderDest/CEP]]></fieldDescription>
+	</field>
+	<field name="dest_enderDest_UF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/enderDest/UF]]></fieldDescription>
+	</field>
+	<field name="dest_enderDest_xPais" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/enderDest/xPais]]></fieldDescription>
+	</field>
+	<field name="dest_email" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/email]]></fieldDescription>
+	</field>
+	<field name="dest_ISUF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/dest/ISUF]]></fieldDescription>
+	</field>
+	<field name="rem_CNPJ" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/CNPJ]]></fieldDescription>
+	</field>
+	<field name="rem_CPF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/CPF]]></fieldDescription>
+	</field>
+	<field name="rem_IE" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/IE]]></fieldDescription>
+	</field>
+	<field name="rem_xNome" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/xNome]]></fieldDescription>
+	</field>
+	<field name="rem_xFant" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/xFant]]></fieldDescription>
+	</field>
+	<field name="rem_fone" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/fone]]></fieldDescription>
+	</field>
+	<field name="rem_enderReme_xLgr" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/enderReme/xLgr]]></fieldDescription>
+	</field>
+	<field name="rem_enderReme_nro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/enderReme/nro]]></fieldDescription>
+	</field>
+	<field name="rem_enderReme_xCpl" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/enderReme/xCpl]]></fieldDescription>
+	</field>
+	<field name="rem_enderReme_xBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/enderReme/xBairro]]></fieldDescription>
+	</field>
+	<field name="rem_enderReme_xMun" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/enderReme/xMun]]></fieldDescription>
+	</field>
+	<field name="rem_enderReme_CEP" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/enderReme/CEP]]></fieldDescription>
+	</field>
+	<field name="rem_enderReme_UF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/enderReme/UF]]></fieldDescription>
+	</field>
+	<field name="rem_enderReme_xPais" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/enderReme/xPais]]></fieldDescription>
+	</field>
+	<field name="rem_email" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/rem/email]]></fieldDescription>
+	</field>
+	<field name="exped_CNPJ" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/CNPJ]]></fieldDescription>
+	</field>
+	<field name="exped_CPF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/CPF]]></fieldDescription>
+	</field>
+	<field name="exped_IE" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/IE]]></fieldDescription>
+	</field>
+	<field name="exped_xNome" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/xNome]]></fieldDescription>
+	</field>
+	<field name="exped_xFant" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/xFant]]></fieldDescription>
+	</field>
+	<field name="exped_fone" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/fone]]></fieldDescription>
+	</field>
+	<field name="exped_enderExped_xLgr" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/enderExped/xLgr]]></fieldDescription>
+	</field>
+	<field name="exped_enderExped_nro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/enderExped/nro]]></fieldDescription>
+	</field>
+	<field name="exped_enderExped_xCpl" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/enderExped/xCpl]]></fieldDescription>
+	</field>
+	<field name="exped_enderExped_xBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/enderExped/xBairro]]></fieldDescription>
+	</field>
+	<field name="exped_enderExped_xMun" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/enderExped/xMun]]></fieldDescription>
+	</field>
+	<field name="exped_enderExped_CEP" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/enderExped/CEP]]></fieldDescription>
+	</field>
+	<field name="exped_enderExped_UF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/enderExped/UF]]></fieldDescription>
+	</field>
+	<field name="exped_enderExped_xPais" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/enderExped/xPais]]></fieldDescription>
+	</field>
+	<field name="exped_email" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/exped/email]]></fieldDescription>
+	</field>
+	<field name="receb_CNPJ" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/CNPJ]]></fieldDescription>
+	</field>
+	<field name="receb_CPF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/CPF]]></fieldDescription>
+	</field>
+	<field name="receb_IE" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/IE]]></fieldDescription>
+	</field>
+	<field name="receb_xNome" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/xNome]]></fieldDescription>
+	</field>
+	<field name="receb_xFant" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/xFant]]></fieldDescription>
+	</field>
+	<field name="receb_fone" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/fone]]></fieldDescription>
+	</field>
+	<field name="receb_enderReceb_xLgr" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/enderReceb/xLgr]]></fieldDescription>
+	</field>
+	<field name="receb_enderReceb_nro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/enderReceb/nro]]></fieldDescription>
+	</field>
+	<field name="receb_enderReceb_xCpl" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/enderReceb/xCpl]]></fieldDescription>
+	</field>
+	<field name="receb_enderReceb_xBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/enderReceb/xBairro]]></fieldDescription>
+	</field>
+	<field name="receb_enderReceb_xMun" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/enderReceb/xMun]]></fieldDescription>
+	</field>
+	<field name="receb_enderReceb_CEP" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/enderReceb/CEP]]></fieldDescription>
+	</field>
+	<field name="receb_enderReceb_UF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/enderReceb/UF]]></fieldDescription>
+	</field>
+	<field name="receb_enderReceb_xPais" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/enderReceb/xPais]]></fieldDescription>
+	</field>
+	<field name="receb_email" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/receb/email]]></fieldDescription>
+	</field>
+	<field name="rodo_infANTT_RNTRC" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infModal/rodo/infANTT/RNTRC]]></fieldDescription>
+	</field>
+	<field name="ide_cUF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/cUF]]></fieldDescription>
+	</field>
+	<field name="ide_tpAmb" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/tpAmb]]></fieldDescription>
+	</field>
+	<field name="ide_tpEmit" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/tpEmit]]></fieldDescription>
+	</field>
+	<field name="ide_mod" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/mod]]></fieldDescription>
+	</field>
+	<field name="ide_serie" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/serie]]></fieldDescription>
+	</field>
+	<field name="ide_nCT" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/nCT]]></fieldDescription>
+	</field>
+	<field name="ide_dhEmi" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/dhEmi]]></fieldDescription>
+	</field>
+	<field name="ide_tpCTe" class="java.lang.Integer">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/tpCTe]]></fieldDescription>
+	</field>
+	<field name="ide_tpEmis" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/tpEmis]]></fieldDescription>
+	</field>
+	<field name="ide_procEmi" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/procEmi]]></fieldDescription>
+	</field>
+	<field name="ide_tpServ" class="java.lang.Integer">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/tpServ]]></fieldDescription>
+	</field>
+	<field name="ide_indGlobalizado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/indGlobalizado]]></fieldDescription>
+	</field>
+	<field name="ide_modal" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/modal]]></fieldDescription>
+	</field>
+	<field name="ide_verProc" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/verProc]]></fieldDescription>
+	</field>
+	<field name="ide_CFOP" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/CFOP]]></fieldDescription>
+	</field>
+	<field name="ide_natOp" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/natOp]]></fieldDescription>
+	</field>
+	<field name="ide_xMunIni" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/xMunIni]]></fieldDescription>
+	</field>
+	<field name="ide_UFIni" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/UFIni]]></fieldDescription>
+	</field>
+	<field name="ide_xMunFim" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/xMunFim]]></fieldDescription>
+	</field>
+	<field name="ide_UFFim" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/UFFim]]></fieldDescription>
+	</field>
+	<field name="ide_toma3_toma" class="java.lang.Integer">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma3/toma]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_toma" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/toma]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_CNPJ" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/CNPJ]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_CPF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/CPF]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_IE" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/IE]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_xNome" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/xNome]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_xFant" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/xFant]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_fone" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/fone]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_enderToma_xLgr" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/enderToma/xLgr]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_enderToma_nro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/enderToma/nro]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_enderToma_xCpl" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/enderToma/xCpl]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_enderToma_xBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/enderToma/xBairro]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_enderToma_xMun" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/enderToma/xMun]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_enderToma_CEP" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/enderToma/CEP]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_enderToma_UF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/enderToma/UF]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_enderToma_xPais" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/enderToma/xPais]]></fieldDescription>
+	</field>
+	<field name="ide_toma4_email" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/ide/toma4/email]]></fieldDescription>
+	</field>
+	<field name="vPrest_vTPrest" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/vPrest/vTPrest]]></fieldDescription>
+	</field>
+	<field name="vPrest_vRec" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/vPrest/vRec]]></fieldDescription>
+	</field>
+	<field name="ICMS_CST" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::CST]]></fieldDescription>
+	</field>
+	<field name="ICMS_ICMSOutraUF_CST" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/ICMSOutraUF/CST]]></fieldDescription>
+	</field>
+	<field name="ICMS_ICMSSN_CST" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/ICMSSN/CST]]></fieldDescription>
+	</field>
+	<field name="ICMS_vBC" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::vBC]]></fieldDescription>
+	</field>
+	<field name="ICMS_vBCSTRet" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::vBCSTRet]]></fieldDescription>
+	</field>
+	<field name="ICMS_vBCOutraUF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::vBCOutraUF]]></fieldDescription>
+	</field>
+	<field name="ICMS_pICMS" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::pICMS]]></fieldDescription>
+	</field>
+	<field name="ICMS_pICMSSTRet" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::pICMSSTRet]]></fieldDescription>
+	</field>
+	<field name="ICMS_pICMSOutraUF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::pICMSOutraUF]]></fieldDescription>
+	</field>
+	<field name="ICMS_vICMS" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::vICMS]]></fieldDescription>
+	</field>
+	<field name="ICMS_vICMSSTRet" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::vICMSSTRet]]></fieldDescription>
+	</field>
+	<field name="ICMS_vICMSOutraUF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::vICMSOutraUF]]></fieldDescription>
+	</field>
+	<field name="ICMS_pRedBC" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::pRedBC]]></fieldDescription>
+	</field>
+	<field name="ICMS_pRedBCOutraUF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/imp/ICMS/descendant::pRedBCOutraUF]]></fieldDescription>
+	</field>
+	<field name="infDoc_infNF" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infDoc/infNF]]></fieldDescription>
+	</field>
+	<field name="infDoc_infNFe" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infDoc/infNFe]]></fieldDescription>
+	</field>
+	<field name="infDoc_infOutros" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infDoc/infOutros]]></fieldDescription>
+	</field>
+	<field name="infGlobalizado_xObs" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infGlobalizado/xObs]]></fieldDescription>
+	</field>
+	<field name="protCTe_infProt_chCTe" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/protCTe/infProt/chCTe]]></fieldDescription>
+	</field>
+	<field name="protCTe_infProt_dhRecbto" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/protCTe/infProt/dhRecbto]]></fieldDescription>
+	</field>
+	<field name="protCTe_infProt_nProt" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/protCTe/infProt/nProt]]></fieldDescription>
+	</field>
+	<field name="protCTe_infProt_cStat" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/protCTe/infProt/cStat]]></fieldDescription>
+	</field>
+	<field name="infCTeNorm_infCarga_vCarga" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infCarga/vCarga]]></fieldDescription>
+	</field>
+	<field name="infCTeNorm_infCarga_proPred" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infCarga/proPred]]></fieldDescription>
+	</field>
+	<field name="infCTeNorm_infCarga_xOutCat" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infCarga/xOutCat]]></fieldDescription>
+	</field>
+	<field name="infCTeNorm_infCarga_infQ_cUnid1" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infCarga/infQ[1]/cUnid]]></fieldDescription>
+	</field>
+	<field name="infCTeNorm_infCarga_infQ_tpMed1" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infCarga/infQ[1]/tpMed]]></fieldDescription>
+	</field>
+	<field name="infCTeNorm_infCarga_infQ_qCarga1" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infCarga/infQ[1]/qCarga]]></fieldDescription>
+	</field>
+	<field name="infCTeNorm_infCarga_infQ_cUnid2" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infCarga/infQ[2]/cUnid]]></fieldDescription>
+	</field>
+	<field name="infCTeNorm_infCarga_infQ_tpMed2" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infCarga/infQ[2]/tpMed]]></fieldDescription>
+	</field>
+	<field name="infCTeNorm_infCarga_infQ_qCarga2" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infCarga/infQ[2]/qCarga]]></fieldDescription>
+	</field>
+	<field name="infAdic_infCpl" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infAdic/infCpl]]></fieldDescription>
+	</field>
+	<field name="infCteSupl_qrCodCTe" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCTeSupl/qrCodCTe]]></fieldDescription>
+	</field>
+	<field name="veicNovos" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/veicNovos]]></fieldDescription>
+	</field>
+	<field name="rodo_RNTRC" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/infCTeNorm/infModal/rodo/RNTRC]]></fieldDescription>
+	</field>
+	<field name="compl_xObs" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/compl/xObs]]></fieldDescription>
+	</field>
+	<field name="compl_ObsCont" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/compl/ObsCont/xTexto]]></fieldDescription>
+	</field>
+	<field name="compl_ObsFisco" class="java.lang.String">
+		<fieldDescription><![CDATA[/cteProc/CTe/infCte/compl/ObsFisco/xTexto]]></fieldDescription>
+	</field>
+	<variable name="V_CURRENT_PAGE_NUMBER" class="java.lang.Integer" resetType="Page">
+		<variableExpression><![CDATA[1]]></variableExpression>
+		<initialValueExpression><![CDATA[$V{PAGE_NUMBER} + 1]]></initialValueExpression>
+	</variable>
+	<background>
+		<band height="609" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="2" y="7" width="559" height="594" forecolor="#CCCCCC" uuid="2ec0a283-89eb-4302-ac44-45dd14349788"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font size="40" isBold="true" isItalic="false" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{protCTe_infProt_cStat}.equals( "101" )? "CT-e CANCELADO \n "  : $F{ide_tpEmis}.equals( "5" ) ? "DACTE em Contingência – impresso em decorrência de problemas técnicos" : $F{ide_tpAmb}.equals( "2" ) || ($F{ide_tpAmb}.equals( "1" ) && $F{protCTe_infProt_nProt} == null) ? "EMITIDO EM AMBIENTE DE HOMOLOGAÇÃO – SEM VALOR FISCAL" : "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band height="56" splitType="Stretch">
+			<frame>
+				<reportElement x="1" y="0" width="552" height="56" uuid="e068bec8-13e4-4cfa-a486-1f6e269fafcf"/>
+				<rectangle>
+					<reportElement x="190" y="9" width="95" height="31" backcolor="#FAFAFA" uuid="478d9c0f-7f66-4309-a32b-8d911250dd94"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="0" y="0" width="552" height="8" uuid="61e859d3-458c-4490-9d59-b32fcd82cacd"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<text><![CDATA[DECLARO QUE RECEBI OS VOLUMES DESTE CONHECIMENTO EM PERFEITO ESTADO PELO QUE DOU POR CUMPRIDO O PRESENTE CONTRATO DE TRANSPORTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="9" width="80" height="10" uuid="5d2fa802-85ef-4c6e-8e11-f315d7f88032"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[NOME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="29" width="80" height="10" uuid="4c59bf74-e36e-4509-904b-2467d2e92f05"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[DOCUMENTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="190" y="40" width="95" height="10" uuid="93f8a702-85cb-43d9-8b37-cded887ac19e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[ASSINATURA/CARIMBO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="287" y="9" width="130" height="40" uuid="f86dc1cd-5f5a-49b3-a9c6-0245249e3409"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[TÉRMINO DA PRESTAÇÃO - DATA/HORA
+______/______/_______ _______:_______
+
+INÍCIO DA PRESTAÇÃO - DATA/HORA
+______/______/_______ _______:_______]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="417" y="10" width="126" height="12" uuid="54f2a3ed-f512-44ee-a453-a2e043a561c3"/>
+					<textElement textAlignment="Center">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[CT-E]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="417" y="24" width="126" height="11" uuid="8e694f2e-4fbd-45ee-a57c-85d1b5d71e39"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Nº DOCUMENTO: " + String.format("%09d", Integer.parseInt($F{ide_nCT})).substring(0,3) + "." + String.format("%09d", Integer.parseInt($F{ide_nCT})).substring(3,6) + "." + String.format("%09d", Integer.parseInt($F{ide_nCT})).substring(6,9)]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="417" y="35" width="126" height="11" uuid="674275c8-558b-43f5-89c2-cedb2427e432"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA["SÉRIE: " + String.format("%03d", Integer.parseInt($F{ide_serie}))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="19" width="190" height="10" uuid="7313c8cd-9851-441f-ae80-478514e1cd94"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[_____________________________________________________]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="39" width="190" height="10" uuid="844873f9-6381-4dd8-8f4b-f18d95d233a7"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[_____________________________________________________]]></text>
+				</staticText>
+			</frame>
+			<line>
+				<reportElement x="2" y="52" width="550" height="1" uuid="d7568d0f-3da5-4ce7-8ba4-f3777980bb66"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="178" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+			<image>
+				<reportElement x="1" y="1" width="80" height="80" uuid="3a26c008-13dd-4bd3-b13e-600207983616"/>
+				<imageExpression><![CDATA[$P{Logotipo}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="84" y="2" width="144" height="33" uuid="414debbc-99ce-406c-aa89-424b13e41578"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emit_xNome} + "\n" + (($F{emit_xFant} != null && $F{emit_xFant}.equals($F{emit_xNome})) ? "" : $F{emit_xFant} == null ? "" : $F{emit_xFant})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="84" y="35" width="144" height="33" uuid="a7eadbe0-8678-4edb-b11c-6fb660c96583"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emit_enderEmit_xLgr} + ", " +  $F{emit_enderEmit_nro} + "\n"
++ $F{emit_enderEmit_xBairro} + "\n"
++ "Telefone: " + (($F{emit_enderEmit_fone} != null && $F{emit_enderEmit_fone}.length() == 10) ?
+("(" + ($F{emit_enderEmit_fone}.substring(0,2).trim()) + ") " + $F{emit_enderEmit_fone}.substring(2,6) + "-" + $F{emit_enderEmit_fone}.substring(6,10)) : $F{emit_enderEmit_fone})]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="450" y="1" width="110" height="110" uuid="8d01d9ee-2197-4dd3-b684-a0fcf19554ff">
+					<printWhenExpression><![CDATA[$F{infCteSupl_qrCodCTe} != null]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+     new com.google.zxing.qrcode.QRCodeWriter().encode(($F{infCteSupl_qrCodCTe} != null ? $F{infCteSupl_qrCodCTe} : "https://dfe-portal.svrs.rs.gov.br/mdfe/qrCode?chCTe=" + $F{protCTe_infProt_chCTe} + "&tpAmb=" + $F{ide_tpAmb}),
+         com.google.zxing.BarcodeFormat.QR_CODE, 350, 350))]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="84" y="68" width="144" height="15" uuid="1532e057-bc37-447f-936e-e04ffbf3a754"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emit_enderEmit_xMun} + " - " + $F{emit_enderEmit_UF}  + "        CEP: " +  $F{emit_enderEmit_CEP}.substring(0,5) + "-" +  $F{emit_enderEmit_CEP}.substring(5,8)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="84" y="84" width="24" height="10" uuid="58bebfd1-7812-4ebc-b893-1878416df045"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CNPJ:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="108" y="84" width="120" height="10" backcolor="#E8E8E8" uuid="73fb57f1-413e-40f4-be05-ceac5f93f653"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emit_CNPJ}.substring(0,2) + "." + $F{emit_CNPJ}.substring(2,5) + "." +
+$F{emit_CNPJ}.substring(5,8) + "/" + $F{emit_CNPJ}.substring(8,12) + "-" +
+$F{emit_CNPJ}.substring(12,14)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="84" y="94" width="14" height="10" uuid="51dcfb38-6ba6-4614-ae7f-49b91ee6b308"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IE:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="98" y="94" width="86" height="10" uuid="65463401-8190-4d21-9f31-0680df370e9d"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emit_IE}== null ? "" : $F{emit_IE}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Auto">
+				<reportElement x="393" y="12" width="51" height="18" uuid="dbe5725c-c994-4e1c-bd21-0a17b6842dbf"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[msg("{0}/{1}", $V{V_CURRENT_PAGE_NUMBER}, $V{PAGE_NUMBER})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="342" y="40" width="102" height="11" uuid="1db94f6d-3e20-429b-8d87-650b1f4f1be8"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{ide_dhEmi} != null ? new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse($F{ide_dhEmi})) : null)]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="228" y="51" width="215" height="46" uuid="485435e2-77d6-4124-abbb-2969908d1953">
+					<property name="com.jaspersoft.studio.unit.barWidth" value="pixel"/>
+					<printWhenExpression><![CDATA[$F{protCTe_infProt_chCTe}!=null]]></printWhenExpression>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128C" drawText="false" checksumRequired="true" barWidth="0" barHeight="0">
+					<jr:codeExpression><![CDATA[$F{protCTe_infProt_chCTe}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="231" y="98" width="213" height="8" uuid="d5711474-d38d-4876-903c-12bcce938039"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chave de Acesso]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="231" y="106" width="213" height="13" uuid="6627bc3f-39ae-4280-a6ee-c3e48d4eed54"/>
+				<textElement>
+					<font size="7.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{protCTe_infProt_chCTe}.substring(0,4) + " " + $F{protCTe_infProt_chCTe}.substring(4,8) + " " + $F{protCTe_infProt_chCTe}.substring(8,12) + " " +
+$F{protCTe_infProt_chCTe}.substring(12,16) + " " + $F{protCTe_infProt_chCTe}.substring(16,20) + " " + $F{protCTe_infProt_chCTe}.substring(20,24) + " " +
+$F{protCTe_infProt_chCTe}.substring(24,28) + " " + $F{protCTe_infProt_chCTe}.substring(28,32) + " " + $F{protCTe_infProt_chCTe}.substring(32,36) + " " +
+$F{protCTe_infProt_chCTe}.substring(36,40) + " " + $F{protCTe_infProt_chCTe}.substring(40,44) + " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="231" y="120" width="49" height="14" uuid="b74af5ac-a075-46a0-a37f-2b4e13d6368a"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Consulta em]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="120" width="164" height="14" uuid="6333624c-f36f-4fd2-b760-2229ae252a6d"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[http://www.cte.fazenda.gov.br/portal/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="2" width="111" height="28" uuid="e0f8cfa3-7cbb-4912-92dd-1040f3ed07c5"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DACTE
+Documento Auxiliar do Conhecimento de Transporte Eletrônico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="30" width="28" height="10" uuid="1e2a0f0a-6e92-4fcd-81dc-11ab4fadf6d7"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODELO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="231" y="40" width="28" height="11" uuid="b7ed5d55-fcf7-4b71-ba02-71c26281ada8"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_mod}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="264" y="30" width="22" height="10" uuid="e21180a0-8256-4ab1-894a-1600dbdbf796"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SÉRIE]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="264" y="40" width="22" height="11" uuid="99063387-fcc8-4bbf-9dde-7fad73b52eac"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.format("%03d", Integer.parseInt($F{ide_serie}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="286" y="40" width="56" height="11" uuid="005c3348-1f7e-4204-bfac-8f9e600a4b6f"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.format("%09d", Integer.parseInt($F{ide_nCT})).substring(0,3) + "." + String.format("%09d", Integer.parseInt($F{ide_nCT})).substring(3,6) + "." + String.format("%09d", Integer.parseInt($F{ide_nCT})).substring(6,9)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="286" y="30" width="56" height="10" uuid="96624fae-e953-42e5-a817-834f922d6e7d"/>
+				<textElement textAlignment="Right">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NÚMERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="2" width="51" height="10" uuid="3dbd5f17-826e-48f7-865a-9492af454894"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MODAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="393" y="2" width="51" height="10" uuid="a0f3a69f-4a4b-4b08-8ba6-60449630d118"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="30" width="102" height="10" uuid="d80f8d4d-7637-4101-bb71-19c00bfb3be4"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA E HORA DE EMISSÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="104" width="83" height="10" uuid="03bf1723-5f95-4918-95f5-8d134e25ed1e"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO DO CT-e]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="114" width="83" height="10" uuid="358ddbce-f47b-4c39-b082-c42fe54f7570"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_tpCTe} == 0 ? "NORMAL" : $F{ide_tpCTe} == 1 ? "COMPLEMENTO" : $F{ide_tpCTe} == 2 ? "ANULAÇÃO" : $F{ide_tpCTe} == 3 ? "SUBSTITUIÇÃO" : ""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="84" y="104" width="144" height="10" uuid="d1ccef16-6637-481f-b217-bdcad8d18e9e"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO DO SERVIÇO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="84" y="114" width="144" height="10" uuid="a2edceec-c65d-4213-b291-cbdb79bcb14f"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_tpServ} == 0 ? "NORMAL" :
+$F{ide_tpServ} == 1 ? "SUBCONTRATAÇÃO" :
+$F{ide_tpServ} == 2 ? "REDESPACHO" :
+$F{ide_tpServ} == 3 ? "REDESPACHO INTERMEDIÁRIO" :
+$F{ide_tpServ} == 4 ? "MULTIMODAL" :
+ ""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="126" width="110" height="10" uuid="96665699-371f-46c6-a6a3-0388dbeca5c6"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INDICADOR DO CT-E GLOBALIZADO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="14" y="136" width="15" height="15" uuid="867fffaf-2f16-4e80-abfe-eb090a39a30c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="31" y="136" width="20" height="15" uuid="07598dd9-2437-48a1-8a91-240c6b5e21bd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SIM]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="52" y="136" width="15" height="15" uuid="254609c0-bd7a-42bc-8c84-ce640fc00aee"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="69" y="136" width="20" height="15" uuid="205e7afd-fbf2-44c0-86a6-ac7c6bb48050"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="118" y="126" width="110" height="10" uuid="d29e2ab4-b7b9-47a2-bbc6-65c853380263"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INF. DO CT-E GLOBALIZADO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="118" y="136" width="110" height="16" uuid="1af4e547-df87-469b-8fa7-36cc1895f28a"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{infGlobalizado_xObs} == null ? "" : $F{infGlobalizado_xObs}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="14" y="136" width="14" height="14" uuid="3a24f491-c30f-4f42-8ce7-f1bc73cf61a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ide_indGlobalizado} != null  ? "X" : ""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="52" y="136" width="14" height="14" uuid="945f7668-d6e5-4b41-a0e7-ac62b0c22944"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ide_indGlobalizado} == null  ? "X" : ""]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Auto">
+				<reportElement x="342" y="12" width="51" height="18" uuid="381052c1-3465-4832-874a-a08d18e1305a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_modal}.equals("01") ? "RODOVIÁRIO" :
+$F{ide_modal}.equals("02") ? "AÉREO" :
+$F{ide_modal}.equals("03") ? "AQUAVIÁRIO" :
+$F{ide_modal}.equals("04") ? "FERROVIÁRIO" :
+$F{ide_modal}.equals("05") ? "DUTOVIÁRIO" :
+$F{ide_tpServ}.equals("06") ? "MULTIMODAL" :
+ ""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="231" y="139" width="212" height="10" uuid="d80623e9-04ae-4b67-820f-f62f5323572f"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dest_ISUF} == null ? "" : "INSCRIÇÃO SUFRAMA DESTINATÁRIO: " + $F{dest_ISUF}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="156" width="213" height="10" uuid="27588771-0ace-4758-acf7-54fc9d66a045"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Protocolo de Autorização de Uso]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="250" y="166" width="213" height="10" uuid="930f5fde-17b2-4a6d-96da-d455a2ee0660"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{ide_tpAmb}.equals( "2" )) || ($F{ide_tpAmb}.equals( "1" ) && $F{protCTe_infProt_nProt} == null) ? "EMITIDO EM AMBIENTE DE HOMOLOGAÇÃO – SEM VALOR FISCAL" : $F{protCTe_infProt_nProt} + " - " + ($F{protCTe_infProt_dhRecbto} != null ? new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse($F{protCTe_infProt_dhRecbto})) : ""))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="156" width="240" height="10" uuid="62eb302c-c4e8-4536-8bad-b353fe371980"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÓDIGO FISCAL DE OPERAÇÕES E PRESTAÇÕES - NATUREZA DA OPERAÇÃO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="166" width="240" height="10" uuid="ef2830ec-9e71-4e66-8434-fc113daefe78"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_CFOP} + " - " + $F{ide_natOp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="84">
+			<frame>
+				<reportElement x="0" y="22" width="270" height="62" uuid="d862ab21-26dd-4bcc-8b5e-2e87662711e4"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="45" y="3" width="221" height="8" uuid="107cd141-623d-4b57-8970-ea6d93f8e76e"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rem_xNome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="2" y="3" width="40" height="8" uuid="cdce2b6b-1014-42ae-883b-99d0b7b112ac"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[REMETENTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="13" width="40" height="8" uuid="6650ed28-f4f2-4982-9458-7a1b2f21fd45"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[ENDEREÇO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="45" y="13" width="221" height="16" uuid="00b58624-3c70-4c23-ad16-d088360e324a"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rem_enderReme_xLgr} + ", " + $F{rem_enderReme_nro} + ($F{rem_enderReme_xCpl} != null  ? $F{rem_enderReme_xCpl} + " " : " ") +
+$F{rem_enderReme_xBairro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="2" y="31" width="40" height="8" uuid="44eaa9ea-7039-41a9-8157-60a1ede38e5f"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[MUNICÍPIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="45" y="31" width="142" height="8" uuid="4f3dcc41-483f-4923-9648-d897d42fad69"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rem_enderReme_xMun} +" - " + $F{rem_enderReme_UF}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="191" y="31" width="18" height="8" uuid="bb473c18-6b50-428f-83a3-51aa09ab3a24"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CEP]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="211" y="31" width="55" height="8" uuid="8eb70d23-4f0e-423e-958d-e81a8f79ed1c"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rem_enderReme_CEP}.substring(0,5) + "-" + $F{rem_enderReme_CEP}.substring(5,8)]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="2" y="41" width="40" height="8" uuid="9d753143-e261-4731-b1c7-9ba24d5da74b"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CPNJ / CPF]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="45" y="41" width="94" height="8" uuid="8e4bb0f5-9ca3-49bd-a6d6-355d23d73137"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rem_CNPJ} != null ? $F{rem_CNPJ}.substring(0,2) + "." +
+$F{rem_CNPJ}.substring(2,5) + "." + $F{rem_CNPJ}.substring(5,8) + "/" +
+$F{rem_CNPJ}.substring(8,12) + "-" + $F{rem_CNPJ}.substring(12,14) :
+$F{rem_CPF}.substring(0,3) + "." + $F{rem_CPF}.substring(3,6) + "." +
+$F{rem_CPF}.substring(6,9) + "-" + $F{rem_CPF}.substring(9,11)]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="149" y="41" width="40" height="8" uuid="8ed68ec6-b824-445c-a02d-29ee42e72b18"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO ESTADUAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="192" y="41" width="74" height="8" uuid="edcfbdb5-0ed9-43be-8095-466007ec8311"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rem_IE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="2" y="51" width="40" height="8" uuid="1fab1c78-5527-4205-91bd-3e53ace646f5"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[PAÍS]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="45" y="51" width="94" height="8" uuid="5fa40b9e-7f3e-4d1c-9ce8-811e8603851a"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rem_enderReme_xPais}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="149" y="51" width="40" height="8" uuid="1939c278-8569-40f0-8b78-2f46ba07de19"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[FONE]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="192" y="51" width="74" height="8" uuid="57fb9014-f5ff-469a-af63-f51397b71877"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{rem_fone} != null && $F{rem_fone}.length() == 10) ?
+("(" + ($F{rem_fone}.substring(0,2).trim()) + ") " + $F{rem_fone}.substring(2,6) + "-" + $F{rem_fone}.substring(6,10)) : $F{rem_fone})]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="272" y="22" width="270" height="62" uuid="cd1b998c-e211-4497-8ef0-b111b1f4eaf1"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="53" y="3" width="213" height="8" uuid="c58c9f5b-ca90-4044-b07a-041de677fcba"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dest_xNome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="2" y="3" width="48" height="8" uuid="54868c62-e6ad-4890-9e42-d2c20652a4c0"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[DESTINATÁRIO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="13" width="48" height="8" uuid="e840d170-ac0b-4d80-9cb9-8dbbd659194b"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[ENDEREÇO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="53" y="13" width="213" height="16" uuid="f36e5383-35ee-4f18-a782-b62e80df3123"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dest_enderDest_xLgr} + ", " + $F{dest_enderDest_nro} + ($F{dest_enderDest_xCpl} != null  ? $F{dest_enderDest_xCpl} + " " : " ") +
+$F{dest_enderDest_xBairro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="2" y="31" width="48" height="8" uuid="b406905c-dae9-44b3-b128-bf4525754d69"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[MUNICÍPIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="53" y="31" width="134" height="8" uuid="967f5ff1-729c-4302-b6c4-6e5872bfbd38"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dest_enderDest_xMun} +" - " + $F{dest_enderDest_UF}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="191" y="31" width="18" height="8" uuid="709b1b98-2c24-484a-bc9a-947bac6842a1"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CEP]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="211" y="31" width="55" height="8" uuid="ded803a8-d1da-4349-a03b-ed33dc66f69d"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dest_enderDest_CEP}.substring(0,5) + "-" + $F{dest_enderDest_CEP}.substring(5,8)]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="2" y="41" width="48" height="8" uuid="3f602ce6-e6c2-4f9d-abe7-3d5c930fd990"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CPNJ / CPF]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="53" y="41" width="86" height="8" uuid="37ac8393-8ca7-4f76-b482-27ed92a13274"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dest_CNPJ} != null ? $F{dest_CNPJ}.substring(0,2) + "." +
+$F{dest_CNPJ}.substring(2,5) + "." + $F{dest_CNPJ}.substring(5,8) + "/" +
+$F{dest_CNPJ}.substring(8,12) + "-" + $F{dest_CNPJ}.substring(12,14) :
+$F{dest_CPF}.substring(0,3) + "." + $F{dest_CPF}.substring(3,6) + "." +
+$F{dest_CPF}.substring(6,9) + "-" + $F{dest_CPF}.substring(9,11)]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="149" y="41" width="40" height="8" uuid="2c436f22-450c-4d77-b5a6-20858f178384"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO ESTADUAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="192" y="41" width="74" height="8" uuid="58b9066f-deb3-4331-ad69-552da9a198a6"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dest_IE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="2" y="51" width="48" height="8" uuid="457fc5a3-13bd-464a-b226-42342eab0872"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[PAÍS]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="53" y="51" width="86" height="8" uuid="a26c301d-a031-44ce-a68e-39579c28f9e6"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dest_enderDest_xPais}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="149" y="51" width="40" height="8" uuid="f7ee8277-a98c-4c26-93d3-aa95552b25e8"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[FONE]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="192" y="51" width="74" height="8" uuid="987b013e-b87b-40fe-931d-edb4510b1dc2"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{dest_fone} != null && $F{dest_fone}.length() == 10) ?
+("(" + ($F{dest_fone}.substring(0,2).trim()) + ") " + $F{dest_fone}.substring(2,6) + "-" + $F{dest_fone}.substring(6,10)) : $F{dest_fone})]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="10" width="270" height="10" uuid="e654b918-9f96-4606-af23-91368be211f7"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_xMunIni} + " - " + $F{ide_UFIni}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="272" y="10" width="270" height="10" uuid="34cab21b-471e-477f-9a28-3108e6d1d428"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_xMunFim} + " - " + $F{ide_UFFim}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="270" height="10" uuid="c7b4b683-56d7-452c-bcdd-c8f1541522d6"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INÍCIO DA PRESTAÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="1" width="270" height="10" uuid="08b8bc4c-a03f-41fd-bbc2-dc536d11399e"/>
+				<textElement textAlignment="Left">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TÉRMINO DA PRESTAÇÃO]]></text>
+			</staticText>
+		</band>
+		<band height="64">
+			<printWhenExpression><![CDATA[$F{exped_xNome} != null && $F{receb_xNome} != null]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="2" width="270" height="62" uuid="b05cd46d-ba29-44dc-9f58-1c778b8f86d4">
+					<printWhenExpression><![CDATA[$F{exped_xNome} != null]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="4" width="221" height="8" uuid="56121cdc-b428-413e-960f-3cf4849d7da0"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{exped_xNome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="4" width="40" height="8" uuid="e902274f-d85b-4c80-b4d8-3a54fdc92e6f"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[EXPEDIDOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="14" width="40" height="8" uuid="b38a1031-b81a-49ac-93d2-bdb4a7b83fb8"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[ENDEREÇO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="14" width="221" height="16" uuid="7962e241-1324-445f-a608-36b01a482692"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{exped_enderExped_xLgr} + ", " + $F{exped_enderExped_nro} + ($F{exped_enderExped_xCpl} != null  ? $F{exped_enderExped_xCpl} + " " : " ") +
+$F{exped_enderExped_xBairro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="32" width="40" height="8" uuid="02cb19a2-45a1-48e6-b8dc-3acacae568d2"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[MUNICÍPIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="32" width="142" height="8" uuid="7a722a8c-2677-4cc3-9004-25deb3179a26"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{exped_enderExped_xMun} +" - " + $F{exped_enderExped_UF}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="191" y="32" width="18" height="8" uuid="030e8719-6763-40c8-b9b2-62d87a6b5db1"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CEP]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="211" y="32" width="55" height="8" uuid="fec83abc-5b2f-4a01-806f-d9835db3e7ad"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{exped_enderExped_CEP}.substring(0,5) + "-" + $F{exped_enderExped_CEP}.substring(5,8)]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="42" width="40" height="8" uuid="8e211acc-6874-49aa-b050-2157e625f401"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CPNJ / CPF]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="42" width="94" height="8" uuid="6c57e94e-878e-42cc-9af3-69a86cc52aee"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{exped_CNPJ} != null ? $F{exped_CNPJ}.substring(0,2) + "." +
+$F{exped_CNPJ}.substring(2,5) + "." + $F{exped_CNPJ}.substring(5,8) + "/" +
+$F{exped_CNPJ}.substring(8,12) + "-" + $F{exped_CNPJ}.substring(12,14) :
+$F{exped_CPF}.substring(0,3) + "." + $F{exped_CPF}.substring(3,6) + "." +
+$F{exped_CPF}.substring(6,9) + "-" + $F{exped_CPF}.substring(9,11)]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="149" y="42" width="40" height="8" uuid="9600bba7-8668-477a-ad24-e548e7e38121"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO ESTADUAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="192" y="42" width="74" height="8" uuid="e770012d-6f53-478f-b943-e750e2a98802"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{exped_IE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="52" width="40" height="8" uuid="820f2e51-b155-4845-8cbe-63caa62af19d"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[PAÍS]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="52" width="94" height="8" uuid="194690ba-524f-4989-b17e-721e27712580"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{exped_enderExped_xPais}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="149" y="52" width="40" height="8" uuid="795f7b8d-ce89-41dc-969a-f1fd7e332494"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[FONE]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="192" y="52" width="74" height="8" uuid="853c3a27-3b06-4b97-ac28-4d0f7a4f86e6"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{exped_fone} != null && $F{exped_fone}.length() == 10) ?
+("(" + ($F{exped_fone}.substring(0,2).trim()) + ") " + $F{exped_fone}.substring(2,6) + "-" + $F{exped_fone}.substring(6,10)) : $F{exped_fone})]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="272" y="2" width="270" height="62" uuid="019353c3-567a-499d-bba3-a8052cc423e7">
+					<printWhenExpression><![CDATA[$F{receb_xNome} != null]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="4" width="221" height="8" uuid="cc1cc0f0-a2a6-4c25-9a89-61c1132fe170"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{receb_xNome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="4" width="40" height="8" uuid="237cc85c-6fb4-46a0-aa73-835c5bf968ce"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[RECEBEDOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="14" width="40" height="8" uuid="3e1f3cac-2f40-4bd4-a73d-c9b609278f68"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[ENDEREÇO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="14" width="221" height="16" uuid="35f414d7-1151-4664-a73c-ac0605d8611c"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{receb_enderReceb_xLgr} + ", " + $F{receb_enderReceb_nro} + ($F{receb_enderReceb_xCpl} != null  ? $F{receb_enderReceb_xCpl} + " " : " ") +
+$F{receb_enderReceb_xBairro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="32" width="40" height="8" uuid="46a2b474-9419-4288-b594-b9c3e1ccb1ce"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[MUNICÍPIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="32" width="142" height="8" uuid="30bd4ad1-631e-4c13-9f7a-1723f332b609"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{receb_enderReceb_xMun} +" - " + $F{receb_enderReceb_UF}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="191" y="32" width="18" height="8" uuid="a156f61c-c89d-4e0f-893b-c67787f804c6"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CEP]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="211" y="32" width="55" height="8" uuid="9f5b3dd7-abab-45f1-a7ab-6178346d165c"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{receb_enderReceb_CEP}.substring(0,5) + "-" + $F{receb_enderReceb_CEP}.substring(5,8)]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="42" width="40" height="8" uuid="cd00fade-cb29-4cd2-8669-4563d50bf4c2"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CPNJ / CPF]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="42" width="94" height="8" uuid="c92ed870-3feb-43af-8280-edb215fef239"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{receb_CNPJ} != null ? $F{receb_CNPJ}.substring(0,2) + "." +
+$F{receb_CNPJ}.substring(2,5) + "." + $F{receb_CNPJ}.substring(5,8) + "/" +
+$F{receb_CNPJ}.substring(8,12) + "-" + $F{receb_CNPJ}.substring(12,14) :
+$F{receb_CPF}.substring(0,3) + "." + $F{receb_CPF}.substring(3,6) + "." +
+$F{receb_CPF}.substring(6,9) + "-" + $F{receb_CPF}.substring(9,11)]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="149" y="42" width="40" height="8" uuid="b1224909-29a4-4882-a94d-1abd2a129859"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO ESTADUAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="192" y="42" width="74" height="8" uuid="a10660b2-93d9-458a-aa9b-ecaba6c3cdc1"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{receb_IE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="52" width="40" height="8" uuid="a64c8feb-18cd-467c-93bf-f5ff1f9e97ab"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[PAÍS]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="52" width="94" height="8" uuid="8927feb1-091e-41d1-bac0-b17f13f8d592"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{receb_enderReceb_xPais}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="149" y="52" width="40" height="8" uuid="2f57b8ff-5c94-4744-bb87-8bb28af12090"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[FONE]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="192" y="52" width="74" height="8" uuid="f68c38af-18f8-49b2-a445-9bd9466e0dd2"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{receb_fone} != null && $F{receb_fone}.length() == 10) ?
+("(" + ($F{receb_fone}.substring(0,2).trim()) + ") " + $F{receb_fone}.substring(2,6) + "-" + $F{receb_fone}.substring(6,10)) : $F{receb_fone})]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="137">
+			<frame>
+				<reportElement x="0" y="38" width="542" height="49" uuid="a0a63908-665e-42f1-8d71-65789d1592d0"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="2" y="13" width="244" height="8" uuid="2ce3ac77-ca86-4d49-ad28-fca5981be395"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{infCTeNorm_infCarga_proPred}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="4" width="244" height="8" uuid="6c2cb79b-0348-4463-b78c-4f1e122a7635"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[PRODUTO PREDOMINANTE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="251" y="4" width="178" height="8" uuid="a6f044a4-c43c-434a-8b81-7b557b61fb53"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[OUTRAS CARACTERÍSTICAS DA CARGA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="460" y="4" width="80" height="8" uuid="624e020e-4321-4baf-8684-70c1fb992725"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALOR TOTAL DA CARGA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="3" y="26" width="24" height="8" uuid="2864bbf4-6899-4141-9186-944adf39d477"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[QTD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="31" y="26" width="60" height="8" uuid="a2bab806-57cc-4103-a3bf-b0ed1e42f5f5"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[PESO BRUTO (KG)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="101" y="26" width="90" height="8" uuid="8f995eab-40af-4e9a-86b6-b6c5a219f225"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[PESO BASE DE CÁLCULO (KG)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="219" y="27" width="61" height="8" uuid="736732d5-ec6a-47d4-a4ab-d16b6bde3492"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[PESO AFERIDO (KG)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="311" y="26" width="48" height="8" uuid="4e235ec6-a28e-4279-b7c7-dcfa439a0a94"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CUBAGEM (M3)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="406" y="26" width="98" height="8" uuid="574892db-6919-4fa3-868f-984106b04946"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[QUANTIDADE DE VOLUME (UND)]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="251" y="14" width="178" height="8" uuid="1df24e8a-a3da-4315-8322-b3fe7f244d8d"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{infCTeNorm_infCarga_xOutCat} == null ? "" : $F{infCTeNorm_infCarga_xOutCat}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="434" y="14" width="100" height="8" uuid="ee7d9386-20eb-471c-9578-d28229be34c5"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(new Double($F{infCTeNorm_infCarga_vCarga} == null ? 0.00 : Double.parseDouble($F{infCTeNorm_infCarga_vCarga})))]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement positionType="Float" x="0" y="23" width="542" height="1" uuid="4cb9498f-920a-4215-9f5a-8607dd32d6df"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="31" y="37" width="60" height="8" uuid="b83e36d6-fb38-438f-8af1-c7d9c2b49180"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+				</textField>
+				<line>
+					<reportElement x="458" y="0" width="1" height="23" uuid="d0c46c5b-affc-494c-983e-9ebbf836169d"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="248" y="0" width="1" height="23" uuid="d9a52c02-8440-41b2-88c5-4893e1edd532"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="101" y="37" width="90" height="8" uuid="ceacd650-dd3a-4919-a3c5-08218672d1f6"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="219" y="37" width="61" height="8" uuid="ddd71a38-9c2b-4df5-afc4-fa9fc6b0157c"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="311" y="37" width="48" height="8" uuid="57283495-79c9-414f-aab8-1252370481fd"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="406" y="37" width="98" height="8" uuid="40b1ad65-7a9b-4502-9af6-006a99eb788c"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{qtdVolumes}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="3" y="37" width="24" height="8" uuid="4a39f12f-a089-4b37-92df-5dbea8aae121"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CARGA]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="2" width="542" height="34" uuid="78fc211f-6876-421a-a8e4-e13dfb1be7c3"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="77" y="4" width="245" height="8" uuid="43832473-1379-4c1b-a7e3-2a5e2a947d8a"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ide_toma3_toma} == null ? $F{ide_toma4_xNome} :
+$F{ide_toma3_toma} == 0 ? $F{rem_xNome} :
+$F{ide_toma3_toma} == 1 ? $F{exped_xNome} :
+$F{ide_toma3_toma} == 2 ? $F{receb_xNome} :
+$F{ide_toma3_toma} == 3 ? $F{dest_xNome} :
+""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="4" width="73" height="8" uuid="3075c1f1-1fe9-4a68-95ca-825db60133ec"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[TOMADOR DO SERVIÇO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="14" width="40" height="8" uuid="1d463a22-043f-4f1c-9399-30394c1ac95f"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[ENDEREÇO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="14" width="414" height="8" uuid="a2744312-218f-4667-8f03-c1d70c56e53e"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ide_toma3_toma} == null ? $F{ide_toma4_enderToma_xLgr} + ", " + $F{ide_toma4_enderToma_nro} + ($F{ide_toma4_enderToma_xCpl} != null  ? $F{ide_toma4_enderToma_xCpl} + " " : " ") + $F{ide_toma4_enderToma_xBairro}:
+$F{ide_toma3_toma} == 0 ? $F{rem_enderReme_xLgr} + ", " + $F{rem_enderReme_nro} + ($F{rem_enderReme_xCpl} != null  ? $F{rem_enderReme_xCpl} + " " : " ") + $F{rem_enderReme_xBairro} :
+$F{ide_toma3_toma} == 1 ? $F{exped_enderExped_xLgr} + ", " + $F{exped_enderExped_nro} + ($F{exped_enderExped_xCpl} != null  ? $F{exped_enderExped_xCpl} + " " : " ") + $F{exped_enderExped_xBairro} :
+$F{ide_toma3_toma} == 2 ? $F{receb_enderReceb_xLgr} + ", " + $F{receb_enderReceb_nro} + ($F{receb_enderReceb_xCpl} != null  ? $F{receb_enderReceb_xCpl} + " " : " ") + $F{receb_enderReceb_xBairro} :
+$F{ide_toma3_toma} == 3 ? $F{dest_enderDest_xLgr} + ", " + $F{dest_enderDest_nro} + ($F{dest_enderDest_xCpl} != null  ? $F{dest_enderDest_xCpl} + " " : " ") + $F{dest_enderDest_xBairro} :
+""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="325" y="4" width="34" height="8" uuid="0867d001-d56f-41fd-93d2-5b0424c37850"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[MUNICÍPIO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="360" y="4" width="116" height="8" uuid="2800436b-8c39-4986-937f-b48687e833bd"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ide_toma3_toma} == null ? $F{ide_toma4_enderToma_xMun} +" - " + $F{ide_toma4_enderToma_UF} : 
+$F{ide_toma3_toma} == 0 ? $F{rem_enderReme_xMun} +" - " + $F{rem_enderReme_UF} :
+$F{ide_toma3_toma} == 1 ? $F{exped_enderExped_xMun} +" - " + $F{exped_enderExped_UF} :
+$F{ide_toma3_toma} == 2 ? $F{receb_enderReceb_xMun} +" - " + $F{receb_enderReceb_UF} :
+$F{ide_toma3_toma} == 3 ?  $F{dest_enderDest_xMun} +" - " + $F{dest_enderDest_UF} :
+""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="477" y="4" width="14" height="8" uuid="62bd74b2-b657-473b-b4fd-c4b07e8bdf63"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CEP]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="492" y="4" width="46" height="8" uuid="efa242b5-8aa7-4962-b60a-82dad34271d1"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ide_toma3_toma} == null ? $F{ide_toma4_enderToma_CEP}.substring(0,5) + "-" + $F{ide_toma4_enderToma_CEP}.substring(5,8) :
+$F{ide_toma3_toma} == 0 ? $F{rem_enderReme_CEP}.substring(0,5) + "-" + $F{rem_enderReme_CEP}.substring(5,8) :
+$F{ide_toma3_toma} == 1 ? $F{exped_enderExped_CEP}.substring(0,5) + "-" + $F{exped_enderExped_CEP}.substring(5,8) :
+$F{ide_toma3_toma} == 2 ? $F{receb_enderReceb_CEP}.substring(0,5) + "-" + $F{receb_enderReceb_CEP}.substring(5,8) :
+$F{ide_toma3_toma} == 3 ? $F{dest_enderDest_CEP}.substring(0,5) + "-" + $F{dest_enderDest_CEP}.substring(5,8) :
+""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="2" y="24" width="40" height="8" uuid="fa27ff7f-913f-44de-964b-53cee7e160c3"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CPNJ / CPF]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="45" y="24" width="94" height="8" uuid="fc9649ec-6313-4305-87ad-fce33b81055e"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ide_toma3_toma} == null ? $F{ide_toma4_CNPJ} != null ? $F{ide_toma4_CNPJ}.substring(0,2) + "." + $F{ide_toma4_CNPJ}.substring(2,5) + "." + $F{ide_toma4_CNPJ}.substring(5,8) + "/" + $F{ide_toma4_CNPJ}.substring(8,12) + "-" + $F{ide_toma4_CNPJ}.substring(12,14) : $F{ide_toma4_CPF}.substring(0,3) + "." + $F{ide_toma4_CPF}.substring(3,6) + "." + $F{ide_toma4_CPF}.substring(6,9) + "-" + $F{ide_toma4_CPF}.substring(9,11) :
+$F{ide_toma3_toma} == 0 ? $F{rem_CNPJ} != null ? $F{rem_CNPJ}.substring(0,2) + "." + $F{rem_CNPJ}.substring(2,5) + "." + $F{rem_CNPJ}.substring(5,8) + "/" + $F{rem_CNPJ}.substring(8,12) + "-" + $F{rem_CNPJ}.substring(12,14) : $F{rem_CPF}.substring(0,3) + "." + $F{rem_CPF}.substring(3,6) + "." + $F{rem_CPF}.substring(6,9) + "-" + $F{rem_CPF}.substring(9,11) :
+$F{ide_toma3_toma} == 1 ? $F{exped_CNPJ} != null ? $F{exped_CNPJ}.substring(0,2) + "." + $F{exped_CNPJ}.substring(2,5) + "." + $F{exped_CNPJ}.substring(5,8) + "/" + $F{exped_CNPJ}.substring(8,12) + "-" + $F{exped_CNPJ}.substring(12,14) : $F{exped_CPF}.substring(0,3) + "." + $F{exped_CPF}.substring(3,6) + "." + $F{exped_CPF}.substring(6,9) + "-" + $F{exped_CPF}.substring(9,11) :
+$F{ide_toma3_toma} == 2 ? $F{receb_CNPJ} != null ? $F{receb_CNPJ}.substring(0,2) + "." + $F{receb_CNPJ}.substring(2,5) + "." + $F{receb_CNPJ}.substring(5,8) + "/" + $F{receb_CNPJ}.substring(8,12) + "-" + $F{receb_CNPJ}.substring(12,14) : $F{receb_CPF}.substring(0,3) + "." + $F{receb_CPF}.substring(3,6) + "." + $F{receb_CPF}.substring(6,9) + "-" + $F{receb_CPF}.substring(9,11) :
+$F{ide_toma3_toma} == 3 ? $F{dest_CNPJ} != null ? $F{dest_CNPJ}.substring(0,2) + "." + $F{dest_CNPJ}.substring(2,5) + "." + $F{dest_CNPJ}.substring(5,8) + "/" + $F{dest_CNPJ}.substring(8,12) + "-" + $F{dest_CNPJ}.substring(12,14) : $F{dest_CPF}.substring(0,3) + "." + $F{dest_CPF}.substring(3,6) + "." + $F{dest_CPF}.substring(6,9) + "-" + $F{dest_CPF}.substring(9,11) :
+""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="141" y="24" width="40" height="8" uuid="921fe7a8-2a4f-43a5-bbf7-d86184849c8e"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[INSCRIÇÃO ESTADUAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="184" y="24" width="74" height="8" uuid="b757e1bb-388d-4cbb-bf51-58c049126a25"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ide_toma3_toma} == null ? $F{ide_toma4_IE} :
+$F{ide_toma3_toma} == 0 ? $F{rem_IE} :
+$F{ide_toma3_toma} == 1 ? $F{exped_IE} :
+$F{ide_toma3_toma} == 2 ? $F{receb_IE} :
+$F{ide_toma3_toma} == 3 ? $F{dest_IE} :
+""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="477" y="14" width="16" height="8" uuid="0fe66bb3-7966-45d6-bf1f-66e321fa4ea2"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[PAÍS]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="492" y="14" width="45" height="8" uuid="63520dcc-cbb5-4a81-af38-33e4d2900af2"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ide_toma3_toma} == null ? $F{ide_toma4_enderToma_xPais} :
+$F{ide_toma3_toma} == 0 ? $F{rem_enderReme_xPais} :
+$F{ide_toma3_toma} == 1 ? $F{exped_enderExped_xPais} :
+$F{ide_toma3_toma} == 2 ? $F{receb_enderReceb_xPais} :
+$F{ide_toma3_toma} == 3 ? $F{dest_enderDest_xPais} :
+""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="262" y="24" width="40" height="8" uuid="a59ca6d5-c9b0-4217-8e7a-cd30cc16edab"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[FONE]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="305" y="24" width="74" height="8" uuid="8fe2abaf-d50a-492c-82da-c0a2a19e74ba"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ide_toma3_toma} == null ? (($F{ide_toma4_fone} != null && $F{ide_toma4_fone}.length() == 10) ? ("(" + ($F{ide_toma4_fone}.substring(0,2).trim()) + ") " + $F{ide_toma4_fone}.substring(2,6) + "-" + $F{ide_toma4_fone}.substring(6,10)) : $F{ide_toma4_fone}) :
+$F{ide_toma3_toma} == 0 ? (($F{rem_fone} != null && $F{rem_fone}.length() == 10) ? ("(" + ($F{rem_fone}.substring(0,2).trim()) + ") " + $F{rem_fone}.substring(2,6) + "-" + $F{rem_fone}.substring(6,10)) : $F{rem_fone}) :
+$F{ide_toma3_toma} == 1 ? (($F{exped_fone} != null && $F{exped_fone}.length() == 10) ? ("(" + ($F{exped_fone}.substring(0,2).trim()) + ") " + $F{exped_fone}.substring(2,6) + "-" + $F{exped_fone}.substring(6,10)) : $F{exped_fone}) :
+$F{ide_toma3_toma} == 2 ? (($F{receb_fone} != null && $F{receb_fone}.length() == 10) ? ("(" + ($F{receb_fone}.substring(0,2).trim()) + ") " + $F{receb_fone}.substring(2,6) + "-" + $F{receb_fone}.substring(6,10)) : $F{receb_fone}) :
+$F{ide_toma3_toma} == 3 ? (($F{dest_fone} != null && $F{dest_fone}.length() == 10) ? ("(" + ($F{dest_fone}.substring(0,2).trim()) + ") " + $F{dest_fone}.substring(2,6) + "-" + $F{dest_fone}.substring(6,10)) : $F{dest_fone}) :
+""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="89" width="542" height="48" uuid="ae758e94-0383-4c2a-a2f8-df10963c5ba4"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="458" y="20" width="81" height="8" uuid="40b4f7d0-7a3b-4746-a140-25f7959cfc33"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(new Double($F{vPrest_vTPrest} == null ? 0.00 : Double.parseDouble($F{vPrest_vTPrest})))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="450" y="13" width="89" height="8" uuid="3061fc5b-a12c-4e17-9676-af204ff8a6cb"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALOR TOTAL DO SERVIÇO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="2" y="2" width="538" height="10" uuid="de56f9f6-8e0d-4045-9394-7d618751d0a1"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="4" y="3" width="534" height="8" uuid="05c71afe-4f40-4ba3-8185-338c6dc08606"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[COMPONENTES DO VALOR DA PRESTAÇÃO DE SERVIÇO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="458" y="33" width="81" height="8" uuid="e7bf9803-a90b-4d65-87a0-f58cabb2af86"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALOR TOTAL A RECEBER]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="458" y="40" width="81" height="8" uuid="ba72e3ac-a7e9-4ef5-92be-8b4de7f57fd3"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(new Double($F{vPrest_vRec} == null ? 0.00 : Double.parseDouble($F{vPrest_vRec})))]]></textFieldExpression>
+				</textField>
+				<subreport>
+					<reportElement x="3" y="20" width="450" height="28" uuid="efd1329c-df6e-44d6-a765-89702ec00c26"/>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/cteProc/CTe/infCte/vPrest/Comp")]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SubPrestacaoServico}]]></subreportExpression>
+				</subreport>
+				<staticText>
+					<reportElement positionType="Float" x="3" y="12" width="66" height="8" uuid="dd654ec7-018e-44cd-bea6-81bd5865372d"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[NOME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="69" y="12" width="41" height="8" uuid="8458d439-440a-491a-b9f9-549770a284dd"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="116" y="12" width="64" height="8" uuid="3a8504aa-d4e7-41e3-b5c2-b2ca2e6ce85a"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[NOME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="180" y="12" width="41" height="8" uuid="1190aac4-2017-44d8-900b-4aa72a479a64"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="339" y="12" width="64" height="8" uuid="612f7687-c1f7-4ff8-8641-4eb6cb29dbbe"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[NOME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="404" y="12" width="41" height="8" uuid="ebf8c36e-b013-420a-bdbe-813c11851498"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALOR]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="227" y="12" width="64" height="8" uuid="799843f5-4bfe-4015-8b1c-385b9e99339e"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[NOME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="292" y="12" width="41" height="8" uuid="d916baac-a35f-4277-b467-8679fd1ec540"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALOR]]></text>
+				</staticText>
+				<line>
+					<reportElement x="113" y="12" width="1" height="36" uuid="c6a8f3a6-7583-4331-9514-103bda847b05"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="337" y="12" width="1" height="36" uuid="a7691bdb-cc08-42b7-9095-1c37eb6b4cf2"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="449" y="12" width="1" height="36" uuid="a1217bbc-421c-40ec-9810-e621ac456e15"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="225" y="12" width="1" height="36" uuid="034e67c5-41a1-426a-a47b-54f513b78d6f"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="30">
+			<frame>
+				<reportElement x="0" y="0" width="542" height="30" uuid="f8ee7349-b0f4-4399-8c58-3517b492940b"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="3" y="20" width="224" height="8" uuid="69006a2f-23c8-4328-baf3-68bd54e92da1"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ICMS_ICMSOutraUF_CST} != null && $F{ICMS_ICMSOutraUF_CST}.equals("90") ? "90 - ICMS Outra UF" :
+$F{ICMS_ICMSSN_CST} != null && $F{ICMS_ICMSSN_CST}.equals("90") ? "90 - ICMS Simples Nacional" :
+$F{ICMS_CST}.equals("00") ? "00 - tributação normal ICMS" :
+$F{ICMS_CST}.equals("20") ? "20 - tributação com BC reduzida do ICMS" :
+$F{ICMS_CST}.equals("40") ? "40 - ICMS isenção" :
+$F{ICMS_CST}.equals("41") ? "41 - ICMS não tributada;" :
+$F{ICMS_CST}.equals("51") ? "51 - ICMS diferido" :
+$F{ICMS_CST}.equals("60") ? "60 - ICMS cobrado por substituição tributária" :
+$F{ICMS_CST}.equals("90") ? "90 - ICMS outros" :
+$F{ICMS_CST} + "....."]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="426" y="12" width="59" height="8" uuid="1361e3a7-b544-43f4-b95f-eedd692b9063"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALOR DO ICMS]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="2" y="2" width="538" height="10" uuid="6a399c4e-57ea-45c4-9a45-6285512d63c7"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="4" y="3" width="534" height="8" uuid="f76e6d92-9c5c-4518-9c43-8d9fe6ce86b5"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[INFORMAÇÕES RELATIVAS A IMPOSTO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="3" y="12" width="127" height="8" uuid="8dbd7b22-7b8b-4502-8d4f-88a610479bad"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[CLASSIFICAÇÃO TRIBUTÁRIA DO SERVIÇO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="364" y="12" width="58" height="8" uuid="906068e3-6466-4b5b-8e3d-4b9f0f782788"/>
+					<textElement textAlignment="Left">
+						<font size="5.5"/>
+					</textElement>
+					<text><![CDATA[ALÍQUOTA DO ICMS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="262" y="12" width="97" height="8" uuid="3b4dfbf1-1b6f-4768-b594-b7b60c1e7bfe"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[BASE DE CÁLCULO]]></text>
+				</staticText>
+				<line>
+					<reportElement x="361" y="12" width="1" height="18" uuid="56363597-6995-42c9-b2e7-30d831926a1b"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="423" y="12" width="1" height="18" uuid="1e211901-713c-40c3-bf8b-f99b34a53ac3"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="259" y="12" width="1" height="18" uuid="9df6c014-b796-4d82-91de-580baae9c003"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement positionType="Float" x="489" y="12" width="51" height="8" uuid="66c9969b-fcb9-4a65-9d57-23afacbb94e8"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[% RED BC. CALC.]]></text>
+				</staticText>
+				<line>
+					<reportElement x="486" y="12" width="1" height="18" uuid="6b0a9081-00ac-4b41-987c-5719f1a06c05"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="262" y="20" width="97" height="8" uuid="790abd15-40be-426e-b2e7-fb90f020de1f"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ICMS_vBC} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vBC})) :
+$F{ICMS_vBCSTRet} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vBCSTRet})) :
+$F{ICMS_vBCOutraUF} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vBCOutraUF})) :
+""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="364" y="20" width="58" height="8" uuid="27f801a8-ff82-4f00-93a1-b14bec46b08c"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ICMS_pICMS} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_pICMS})) :
+$F{ICMS_pICMSSTRet} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_pICMSSTRet})) :
+$F{ICMS_pICMSOutraUF} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_pICMSOutraUF})) :
+""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="426" y="20" width="59" height="8" uuid="695eb81e-11b8-4bdf-b371-bd085441e3f5"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ICMS_vICMS} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vICMS})) :
+$F{ICMS_vICMSSTRet} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vICMSSTRet})) :
+$F{ICMS_vICMSOutraUF} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vICMSOutraUF})) :
+""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="489" y="20" width="51" height="8" uuid="61664985-f422-4612-ae09-5636597065b4"/>
+					<textElement textAlignment="Right">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble("0.00"))]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="48">
+			<printWhenExpression><![CDATA[$F{infDoc_infNF} != null]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="542" height="48" uuid="a23ef749-4ce1-4e83-816c-794e09bc1404"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<rectangle>
+					<reportElement x="2" y="2" width="538" height="10" uuid="cb24339a-1e29-491d-ba6c-3a59a068ab52"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="4" y="3" width="534" height="8" uuid="6e24c7c8-cfe1-400d-9f44-03c1297f027a"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[DOCUMENTOS ORIGINÁRIOS ( NOTA FISCAL )]]></text>
+				</staticText>
+				<subreport>
+					<reportElement x="3" y="12" width="535" height="28" uuid="2d63cb0a-f78c-473d-b44d-154268391231"/>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/cteProc/CTe/infCte/infCTeNorm/infDoc/infNF")]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SubDocumentosOriginariosNF}]]></subreportExpression>
+				</subreport>
+				<line>
+					<reportElement x="270" y="12" width="1" height="36" uuid="a1706fc8-a9dd-4973-bf49-f844faf21007"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="48">
+			<printWhenExpression><![CDATA[$F{infDoc_infNFe} != null]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="542" height="48" uuid="c55e713f-cbdf-4e1b-bcd2-304a19024114"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<rectangle>
+					<reportElement x="2" y="2" width="538" height="10" uuid="fd1e29a6-99bd-440a-b719-e1ab0aef70b6"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="4" y="3" width="534" height="8" uuid="320adbb9-3d7a-4e87-9be3-97c32ef81ec7"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[DOCUMENTOS ORIGINÁRIOS ( NOTA FISCAL ELETRÔNICA )]]></text>
+				</staticText>
+				<subreport>
+					<reportElement x="3" y="13" width="535" height="28" uuid="c2bcf221-39b1-4119-9e55-bf3c39b42324"/>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/cteProc/CTe/infCte/infCTeNorm/infDoc/infNFe")]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SubDocumentosOriginariosNFe}]]></subreportExpression>
+				</subreport>
+				<line>
+					<reportElement x="270" y="12" width="1" height="36" uuid="d0440b05-7706-44ed-be36-9d8d67322cff"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="48">
+			<printWhenExpression><![CDATA[$F{infDoc_infOutros} != null]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="542" height="48" uuid="90dfcc40-27ce-42cf-94e7-8125e07c3bf8"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<rectangle>
+					<reportElement x="2" y="2" width="538" height="10" uuid="7055469e-58f6-4483-8b2d-a15158e931ce"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="4" y="3" width="534" height="8" uuid="aab7e793-563e-4848-ab0e-d9817efb3cf8"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[DOCUMENTOS ORIGINÁRIOS ( OUTROS DOCUMENTOS )]]></text>
+				</staticText>
+				<subreport>
+					<reportElement x="3" y="13" width="535" height="28" uuid="a2921163-1cb9-451c-8ac4-f3158deb779a"/>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/cteProc/CTe/infCte/infCTeNorm/infDoc/infOutros")]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SubDocumentosOriginariosOutros}]]></subreportExpression>
+				</subreport>
+				<line>
+					<reportElement x="270" y="12" width="1" height="36" uuid="777b2d5d-48a1-40a0-acc6-bebeebaccec6"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+		<band height="48">
+			<printWhenExpression><![CDATA[$F{veicNovos} != null]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="0" width="542" height="48" uuid="87585482-fd97-4ef8-a105-ff696d7998af"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<rectangle>
+					<reportElement x="2" y="2" width="538" height="10" uuid="fcab7481-6428-499d-b9e9-e2dcba6ec40d"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="4" y="3" width="534" height="8" uuid="37b9f408-3625-43d4-8b5f-ae2cbdce48e6"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[INFORMAÇÕES SOBRE VEÍCULOS NOVOS]]></text>
+				</staticText>
+				<subreport>
+					<reportElement x="3" y="13" width="535" height="28" uuid="712403d1-71fb-40b3-ba79-3fa5cd1ac228"/>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/cteProc/CTe/infCte/infCTeNorm/veicNovos")]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SubVeiculosNovos}]]></subreportExpression>
+				</subreport>
+				<line>
+					<reportElement x="270" y="12" width="1" height="36" uuid="c8f21528-4a5f-4ca0-b149-0e47e2938776"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="128">
+			<printWhenExpression><![CDATA[$V{V_CURRENT_PAGE_NUMBER} == 1]]></printWhenExpression>
+			<textField isBlankWhenNull="true">
+				<reportElement x="439" y="120" width="103" height="8" uuid="74e276f6-fcfc-4d2e-9b09-09b467bebbed"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_verProc}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="0" width="542" height="30" uuid="66f7c5a2-68b8-4b69-9ebc-decc4735c385"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<rectangle>
+					<reportElement x="2" y="2" width="538" height="10" uuid="788a6bc7-a887-4e99-8adf-1782c76c724c"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="4" y="3" width="534" height="8" uuid="ab2e95fd-ec16-44df-9613-95c7f4c61cd6"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[INFORMAÇÕES ESPECÍFICAS DO MODAL RODOVIÁRIO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="3" y="12" width="66" height="8" uuid="4b81cb1a-d643-4dc8-9bcd-f7bfbbab3a6d"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[RNTRC DA EMPRESA]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="4" y="21" width="65" height="8" uuid="3d980cef-17d3-4cfd-a1ca-c3b693935265"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{rodo_RNTRC}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="73" y="12" width="1" height="18" uuid="8becfef7-f03a-4ac1-9a73-02c780dad466"/>
+					<graphicElement>
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement positionType="Float" x="78" y="17" width="459" height="8" uuid="4b6cd467-b576-499a-b07a-333f6547bba7"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[ESTE CONHECIMENTO DE TRANSPORTE ATENDE À LEGISLAÇÃO DE TRANSPORTE RODOVIÁRIO EM VIGOR]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="40" width="345" height="80" uuid="d89e960e-b407-47de-b2cb-d50f03f78e39"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<rectangle>
+					<reportElement x="2" y="2" width="340" height="10" uuid="f27190f5-de0e-4aca-8414-c45bd1f33c5c"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="4" y="3" width="333" height="8" uuid="f5a67714-dc28-4e32-a669-ace143643706"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[USO EXCLUSIVO DO EMISSOR DO CT-E]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="3" y="13" width="339" height="65" uuid="fdcb51a7-8c0f-4ee1-943c-170cd6e9a54e"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{compl_xObs}.isEmpty() ? "" : $F{compl_xObs}+";")+($F{compl_ObsCont}.isEmpty() ? "" : $F{compl_ObsCont})).replaceAll(";", "\n")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="346" y="40" width="196" height="80" uuid="d2adba6a-765d-4508-8ad3-4c833541066a"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<rectangle>
+					<reportElement x="2" y="2" width="192" height="10" uuid="1047b955-174c-42d3-9a7d-233d1e2f4f2c"/>
+					<graphicElement>
+						<pen lineWidth="0.25"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement positionType="Float" x="4" y="3" width="187" height="8" uuid="8e767c6f-9a77-4038-b1eb-d0967ccb7adc"/>
+					<textElement textAlignment="Center">
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[RESERVADO AO FISCO]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" x="3" y="13" width="190" height="65" uuid="1375c133-4f62-40be-98ea-5f9fbd6bec99"/>
+					<textElement textAlignment="Left">
+						<font size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{compl_ObsFisco}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

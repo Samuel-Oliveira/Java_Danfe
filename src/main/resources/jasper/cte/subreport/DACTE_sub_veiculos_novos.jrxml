@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DACTE_sub_veiculos_novos" columnCount="2" printOrder="Horizontal" pageWidth="535" pageHeight="16" columnWidth="267" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="b45925c1-1660-45a9-a190-aa761768b923">
+	<property name="ireport.zoom" value="2.1435888100000016"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["D:\\JAVA\\Dropbox\\WORKSPACE ECLIPSE\\BITBUCKET ASTER\\aster-impressao\\src\\main\\resources\\rel\\dacte\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[//NFe/infNFe/cobr/dup]]>
+	</queryString>
+	<field name="chassi" class="java.lang.String">
+		<fieldDescription><![CDATA[chassi]]></fieldDescription>
+	</field>
+	<field name="xCor" class="java.lang.String">
+		<fieldDescription><![CDATA[xCor]]></fieldDescription>
+	</field>
+	<field name="vUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[vUnit]]></fieldDescription>
+	</field>
+	<field name="vFrete" class="java.lang.String">
+		<fieldDescription><![CDATA[vFrete]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<columnHeader>
+		<band height="8">
+			<staticText>
+				<reportElement positionType="Float" x="74" y="0" width="41" height="8" uuid="f758e2c8-72ed-4264-9f36-6fda4765472c"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[COR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="0" width="36" height="8" uuid="3b00e012-edf3-43ab-876e-3c66a938ec3e"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[CHASSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="115" y="0" width="74" height="8" uuid="fe877a58-bb6a-44c0-84fa-2144b5b37205"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[MARCA/MODELO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="267" y="0" width="1" height="8" uuid="71e12cbd-257b-4464-9e31-c51536a60bec"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="198" y="0" width="27" height="8" uuid="fb2e78e2-b8ce-41b1-bd80-de4314fadd3a"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[V. UNIT.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="235" y="0" width="30" height="8" uuid="7a35cacc-b114-46f3-9e9c-9bfdcf8ffaf2"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[V. FRETE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="8">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="0" width="70" height="8" uuid="cc5f0c25-54ba-4781-a896-6483fa9df15f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chassi}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="267" y="0" width="1" height="8" uuid="533f99fe-9648-4dd5-b11b-c6edbddff793"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="73" y="0" width="42" height="8" uuid="83988408-0b26-455f-a71c-e85d8ac79d5e">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{xCor}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="115" y="0" width="74" height="8" uuid="4b852931-1c16-49ee-9fbd-e310870a590d">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{xCor}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="189" y="0" width="36" height="8" uuid="44d0ed2e-d48d-483c-8428-1ae7544c6634">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf($F{vUnit}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="229" y="0" width="36" height="8" uuid="73a735c2-41cf-4f00-801c-12f5974241ec">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf($F{vFrete}))]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

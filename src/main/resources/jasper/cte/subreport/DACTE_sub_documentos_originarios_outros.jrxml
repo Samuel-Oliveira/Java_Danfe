@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DACTE_sub_documentos_originarios_outros" columnCount="2" printOrder="Horizontal" pageWidth="535" pageHeight="16" columnWidth="267" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="b5669f0e-ce94-41e5-9aa5-39dfa2d9da7f">
+	<property name="ireport.zoom" value="2.1435888100000016"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["D:\\JAVA\\Dropbox\\WORKSPACE ECLIPSE\\BITBUCKET ASTER\\aster-impressao\\src\\main\\resources\\rel\\dacte\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[//NFe/infNFe/cobr/dup]]>
+	</queryString>
+	<field name="tpDoc" class="java.lang.String">
+		<fieldDescription><![CDATA[tpDoc]]></fieldDescription>
+	</field>
+	<field name="descOutros" class="java.lang.String">
+		<fieldDescription><![CDATA[descOutros]]></fieldDescription>
+	</field>
+	<field name="nDoc" class="java.lang.String">
+		<fieldDescription><![CDATA[nDoc]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<columnHeader>
+		<band height="8">
+			<staticText>
+				<reportElement positionType="Float" x="58" y="0" width="41" height="8" uuid="c661b1b0-8dd3-4834-a693-f9e87d485a7f"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[NÚMERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="0" width="36" height="8" uuid="12c4a43a-ccaf-401e-bdae-5c8c4009a3c2"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[TIPO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="109" y="0" width="150" height="8" uuid="d143e2c9-6feb-4507-9fa8-20358145d6a5"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[DESCRIÇÃO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="267" y="0" width="1" height="8" uuid="daf2c3f6-e004-4dce-b867-107e939cd620"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="8">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="0" width="55" height="8" uuid="cc5f0c25-54ba-4781-a896-6483fa9df15f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tpDoc}.equals("00") ? "00 - Declaração" : 
+$F{tpDoc}.equals("10") ? "10 - Dutoviário" : 
+$F{tpDoc}.equals("59") ? "59 - CF-e SAT" : 
+$F{tpDoc}.equals("65") ? "65 - NFC-e" : 
+$F{tpDoc}.equals("99") ? "99 - Outros" : 
+$F{tpDoc} + " - OUTROS"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="58" y="0" width="41" height="8" uuid="533f99fe-9648-4dd5-b11b-c6edbddff793">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nDoc} != null ? $F{nDoc} : ""]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="267" y="0" width="1" height="8" uuid="533f99fe-9648-4dd5-b11b-c6edbddff793"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="109" y="0" width="156" height="8" uuid="4f1202a2-e308-445a-a8e3-dcd2e07343df">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descOutros} != null ? $F{descOutros} : ""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

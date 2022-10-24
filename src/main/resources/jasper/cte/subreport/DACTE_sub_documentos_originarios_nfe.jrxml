@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DACTE_sub_documentos_originarios_nfe" columnCount="2" printOrder="Horizontal" pageWidth="535" pageHeight="16" columnWidth="267" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="b6641f83-b9b3-45fb-b955-4436500f807a">
+	<property name="ireport.zoom" value="2.1435888100000016"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cte"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["D:\\JAVA\\Dropbox\\WORKSPACE ECLIPSE\\BITBUCKET ASTER\\aster-impressao\\src\\main\\resources\\rel\\dacte\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/cteProc/CTe/infCte/infCTeNorm/infDoc/infNFe]]>
+	</queryString>
+	<field name="chave" class="java.lang.String">
+		<fieldDescription><![CDATA[chave]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<columnHeader>
+		<band height="8">
+			<staticText>
+				<reportElement positionType="Float" x="3" y="0" width="28" height="8" uuid="7ba62c75-5795-418c-9f07-4aa8989bd5c3"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[MODELO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="96" y="0" width="164" height="8" uuid="0d5c3847-5152-4613-a022-7e9eb50d58fc"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[CHAVE DE ACESSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="31" y="0" width="19" height="8" uuid="160ad7ce-c262-4fcf-bd17-8e612a389e5b"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[SERIE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="267" y="0" width="1" height="8" uuid="53faa876-e1a1-4d6d-a3b6-a7178fedf8b0"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="50" y="0" width="42" height="8" uuid="6708d2cb-f41f-4120-a63d-49d877901c3b"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[NÚMERO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="8">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="0" width="28" height="8" uuid="69c8d364-7f64-4ac5-b98a-3b63fa4f51af">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chave}.substring(20,22)]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="31" y="0" width="19" height="8" uuid="4678c5c3-9652-45e3-8b3c-85e145b00929">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chave}.substring(22,25)]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="96" y="0" width="168" height="8" uuid="4cf56b07-931d-483f-ad2b-fd5f5777020e">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chave}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="267" y="0" width="1" height="8" uuid="91bf17f3-52cc-4896-843e-282e5a2f9966"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="0" width="42" height="8" uuid="fe3896a3-7e7d-4f81-80e3-98786db13b33">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chave}.substring(25,34)]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

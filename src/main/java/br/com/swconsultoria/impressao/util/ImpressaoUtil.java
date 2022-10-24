@@ -84,4 +84,27 @@ public class ImpressaoUtil {
         return impressaoNFCe;
     }
 
+    /**
+     * Gera Objeto padrão para impressão da CTe
+     *
+     * @return
+     */
+    public static Impressao impressaoPadraoCTe(String xml) {
+        Impressao impressaoCTe = new Impressao();
+        impressaoCTe.setXml(xml);
+        impressaoCTe.setPathExpression("/");
+        impressaoCTe.setJasper(ImpressaoUtil.class.getResourceAsStream("/jasper/cte/dacte.jasper"));
+
+        impressaoCTe.getParametros().put("SubPrestacaoServico", ImpressaoService.class.getResourceAsStream("/jasper/cte/subreport/DACTE_sub_prestacao_servico.jasper"));
+        impressaoCTe.getParametros().put("SubDocumentosOriginariosNF", ImpressaoService.class.getResourceAsStream("/jasper/cte/subreport/DACTE_sub_documentos_originarios_nf" +
+                ".jasper"));
+        impressaoCTe.getParametros().put("SubDocumentosOriginariosNFe", ImpressaoService.class.getResourceAsStream("/jasper/cte/subreport/DACTE_sub_documentos_originarios_nfe" +
+                ".jasper"));
+        impressaoCTe.getParametros().put("SubDocumentosOriginariosOutros", ImpressaoService.class.getResourceAsStream("/jasper/cte/subreport" +
+                "/DACTE_sub_documentos_originarios_outros.jasper"));
+        impressaoCTe.getParametros().put("SubVeiculosNovos", ImpressaoService.class.getResourceAsStream("/jasper/cte/subreport" +
+                "/DACTE_sub_veiculos_novos.jasper"));
+        return impressaoCTe;
+    }
+
 }

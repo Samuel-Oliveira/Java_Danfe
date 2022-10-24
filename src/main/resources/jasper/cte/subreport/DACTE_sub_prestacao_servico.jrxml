@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="danfe_nfe_sub_faturas" columnCount="4" printOrder="Horizontal" pageWidth="450" pageHeight="8" columnWidth="112" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="7d35bbc3-6840-4844-92fa-087a143bd437">
+	<property name="ireport.zoom" value="2.1435888100000016"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["D:\\JAVA\\Dropbox\\WORKSPACE ECLIPSE\\BITBUCKET ASTER\\aster-impressao\\src\\main\\resources\\rel\\dacte\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[//NFe/infNFe/cobr/dup]]>
+	</queryString>
+	<field name="dup_nDup" class="java.lang.String">
+		<fieldDescription><![CDATA[nDup]]></fieldDescription>
+	</field>
+	<field name="dup_dVenc" class="java.lang.String">
+		<fieldDescription><![CDATA[dVenc]]></fieldDescription>
+	</field>
+	<field name="dup_vDup" class="java.lang.String">
+		<fieldDescription><![CDATA[vDup]]></fieldDescription>
+	</field>
+	<field name="fat_nFat" class="java.lang.String">
+		<fieldDescription><![CDATA[nFat]]></fieldDescription>
+	</field>
+	<field name="fat_vOrig" class="java.lang.String">
+		<fieldDescription><![CDATA[vOrig]]></fieldDescription>
+	</field>
+	<field name="fat_vDesc" class="java.lang.String">
+		<fieldDescription><![CDATA[vDesc]]></fieldDescription>
+	</field>
+	<field name="fat_vLiq" class="java.lang.String">
+		<fieldDescription><![CDATA[vLiq]]></fieldDescription>
+	</field>
+	<field name="vComp" class="java.lang.String">
+		<fieldDescription><![CDATA[vComp]]></fieldDescription>
+	</field>
+	<field name="xNome" class="java.lang.String">
+		<fieldDescription><![CDATA[xNome]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<detail>
+		<band height="8">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="66" height="8" uuid="dea38973-df42-4ee8-8be0-17841bbbb369">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{xNome}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="66" y="0" width="41" height="8" uuid="50344d86-a355-4f4f-bea4-3dccd9c0045d">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format(Double.valueOf($F{vComp}))]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="110" y="0" width="1" height="8" uuid="d06b1b57-6d6f-44d7-86bb-a8f1d9bd9d4e"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
