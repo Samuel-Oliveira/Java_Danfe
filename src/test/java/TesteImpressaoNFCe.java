@@ -12,7 +12,7 @@ public class TesteImpressaoNFCe {
     public static void main(String[] args) {
         try {
             //Faça a leitura do Arquivo
-            String xml = ImpressaoUtil.leArquivo("/d/teste/nfce.xml");
+            String xml = ImpressaoUtil.leArquivo("d:/teste/nfce.xml");
 
             //Informe a Url de Consulta do NFCe de seu Estado
             String urlConsulta = "www.sefaznet.ac.gov.br/nfce/consulta";
@@ -29,7 +29,7 @@ public class TesteImpressaoNFCe {
     }
 
     private static void impressaoPdfArquivo(Impressao impressao) throws IOException, JRException, ParserConfigurationException, SAXException {
-        ImpressaoService.impressaoPdfArquivo(impressao, "/d/teste/teste-nfce.pdf");
+        ImpressaoService.impressaoPdfArquivo(impressao, "d:/teste/teste-nfce.pdf");
     }
 
 }

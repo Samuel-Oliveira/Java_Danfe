@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="danfe" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="565" leftMargin="14" rightMargin="16" topMargin="14" bottomMargin="14" uuid="916f4b39-302a-4df3-b709-5d818c10c0ee">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="322"/>
@@ -25,9 +25,7 @@
 	<parameter name="Logo" class="java.io.InputStream" isForPrompting="false">
 		<parameterDescription><![CDATA[Imagem do logo da empresa.]]></parameterDescription>
 	</parameter>
-	<parameter name="SUBREPORT" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["/nfe/danfe_fatura.jasper"]]></defaultValueExpression>
-	</parameter>
+	<parameter name="SUBREPORT" class="java.io.InputStream" isForPrompting="false"/>
 	<queryString language="xPath">
 		<![CDATA[/nfeProc/NFe/infNFe/det]]>
 	</queryString>

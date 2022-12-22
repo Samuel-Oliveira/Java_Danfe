@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.swconsultoria</groupId>
     <artifactId>java-danfe</artifactId>
-    <version>1.3-SNAPSHOT</version>
+    <version>1.3</version>
     <name>Java_Danfe</name>
     <description>Biblioteca para impressão de Documentos Fiscais</description>
     <url>https://github.com/Samuel-Oliveira/Java_Danfe</url>

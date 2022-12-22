@@ -12,8 +12,7 @@ public class TesteImpressaoNFe {
     public static void main(String[] args) {
         try {
             //Faça a leitura do Arquivo
-//            String xml = ImpressaoUtil.leArquivo("/d/teste/nfe.xml");
-            String xml = ImpressaoUtil.leArquivo("/d/teste/nfe.xml");
+            String xml = ImpressaoUtil.leArquivo("d:/teste/nfe.xml");
 
             //Aqui está pegando o Layout Padrão
             Impressao impressao = ImpressaoUtil.impressaoPadraoNFe(xml);
@@ -28,6 +27,6 @@ public class TesteImpressaoNFe {
     }
 
     private static void impressaoPdfArquivo(Impressao impressao) throws IOException, JRException, ParserConfigurationException, SAXException {
-        ImpressaoService.impressaoPdfArquivo(impressao, "/d/teste/teste-nfe.pdf");
+        ImpressaoService.impressaoPdfArquivo(impressao, "d:/teste/teste-nfe.pdf");
     }
 }
