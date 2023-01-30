@@ -5,6 +5,7 @@
 	<property name="ireport.x" value="322"/>
 	<property name="ireport.y" value="160"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NF-e"/>
+	<import value="org.apache.commons.text.StringEscapeUtils"/>
 	<style name="campoPequeno" hTextAlign="Left" hImageAlign="Left" vTextAlign="Top" vImageAlign="Top" markup="styled" pattern="" fontName="Verdana" fontSize="4" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
 	<style name="borda" mode="Transparent" forecolor="#000000" fill="Solid" radius="3" scaleImage="Clip" hTextAlign="Left" hImageAlign="Left" vTextAlign="Top" vImageAlign="Top" markup="none" pattern="" fontName="Verdana" fontSize="5" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="true" isPdfEmbedded="false">
 		<pen lineWidth="0.25"/>
@@ -1123,7 +1124,7 @@ $F{Trans_CPF}.substring(9,11) : ""]]></textFieldExpression>
 					<textElement>
 						<font fontName="Verdana" size="4"/>
 					</textElement>
-					<textFieldExpression><![CDATA["RECEBEMOS DE " + $F{Emi_Nome}.toUpperCase() + " OS PRODUTOS CONSTANTES NA NOTA FISCAL INDICADA AO LADO."]]></textFieldExpression>
+					<textFieldExpression><![CDATA["RECEBEMOS DE " + StringEscapeUtils.escapeXml11($F{Emi_Nome}.toUpperCase()) + " OS PRODUTOS CONSTANTES NA NOTA FISCAL INDICADA AO LADO."]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
@@ -1342,7 +1343,7 @@ $F{Chave}.substring(36,40) + " " + $F{Chave}.substring(40,44) + " "]]></textFiel
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Verdana" size="10" isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{Emi_Nome}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[StringEscapeUtils.escapeXml11($F{Emi_Nome})]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement style="dados" positionType="Float" x="67" y="31" width="201" height="48" uuid="20a6c419-7ae2-4f66-b90c-433b4bbde074"/>
