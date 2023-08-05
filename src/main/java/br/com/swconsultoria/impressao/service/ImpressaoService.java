@@ -19,6 +19,8 @@ import java.io.StringReader;
  */
 public class ImpressaoService {
 
+    private ImpressaoService(){}
+
     /**
      * Cria a impressão no caminho definido e no formato PDF
      * @param impressao

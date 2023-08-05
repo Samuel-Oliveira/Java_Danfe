@@ -17,6 +17,8 @@ import java.util.StringJoiner;
  */
 public class ImpressaoUtil {
 
+    private ImpressaoUtil(){}
+
     /**
      * Verifica se um objeto é vazio.
      *
@@ -28,11 +30,11 @@ public class ImpressaoUtil {
         if (obj == null)
             return Optional.empty();
         if (obj instanceof Collection)
-            return ((Collection<?>) obj).size() == 0 ? Optional.empty() : Optional.of(obj);
+            return ((Collection<?>) obj).isEmpty() ? Optional.empty() : Optional.of(obj);
 
         final String s = String.valueOf(obj).trim();
 
-        return s.length() == 0 || s.equalsIgnoreCase("null") ? Optional.empty() : Optional.of(obj);
+        return s.isEmpty() || s.equalsIgnoreCase("null") ? Optional.empty() : Optional.of(obj);
     }
 
     /**
@@ -43,8 +45,9 @@ public class ImpressaoUtil {
      */
     public static String leArquivo(String caminhoArquivo) throws IOException {
 
-        verifica(caminhoArquivo).orElseThrow(() -> new IllegalArgumentException("Arquivo não pode ser nulo/vazio."));
-        if (!Files.exists(Paths.get(caminhoArquivo))) {
+        if (!Files.exists(Paths.get(
+                verifica(caminhoArquivo)
+                        .orElseThrow(() -> new IllegalArgumentException("Arquivo não pode ser nulo/vazio."))))) {
             throw new FileNotFoundException("Arquivo " + caminhoArquivo + " não encontrado.");
         }
         List<String> list = Files.readAllLines(Paths.get(caminhoArquivo));
