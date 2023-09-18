@@ -288,27 +288,9 @@
 	<field name="Prod_ValorIPI" class="java.lang.String">
 		<fieldDescription><![CDATA[imposto/IPI/IPITrib/vIPI]]></fieldDescription>
 	</field>
-	<field name="Prod_VeicProd_Chassi" class="java.lang.String">
-		<fieldDescription><![CDATA[prod/veicProd/chassi]]></fieldDescription>
-	</field>
-	<field name="Prod_VeicProd_Pot" class="java.lang.String">
-		<fieldDescription><![CDATA[prod/veicProd/pot]]></fieldDescription>
-	</field>
-	<field name="Prod_VeicProd_TpComb" class="java.lang.String">
-		<fieldDescription><![CDATA[prod/veicProd/tpComb]]></fieldDescription>
-	</field>
-	<field name="Prod_VeicProd_CodigoModelo" class="java.lang.String">
-		<fieldDescription><![CDATA[prod/veicProd/cMod]]></fieldDescription>
-	</field>
-	<field name="Prod_VeicProd_AnoMod" class="java.lang.String">
-		<fieldDescription><![CDATA[prod/veicProd/anoMod]]></fieldDescription>
-	</field>
 	<field name="infAdProd" class="java.lang.String">
 		<property name="net.sf.jasperreports.xpath.field.expression" value="infAdProd"/>
 		<fieldDescription><![CDATA[infAdProd]]></fieldDescription>
-	</field>
-	<field name="Entr_UF" class="java.lang.String">
-		<fieldDescription><![CDATA[../entrega/UF]]></fieldDescription>
 	</field>
 	<variable name="count_itens" class="java.lang.Integer" resetType="None" incrementType="Report" calculation="Count">
 		<variableExpression><![CDATA[$V{REPORT_COUNT}]]></variableExpression>
