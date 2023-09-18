@@ -5,7 +5,7 @@
 	<property name="ireport.x" value="322"/>
 	<property name="ireport.y" value="160"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NF-e"/>
-	<import value="org.apache.commons.text.StringEscapeUtils"/>
+	<import value="org.apache.commons.lang3.StringEscapeUtils"/>
 	<style name="campoPequeno" hTextAlign="Left" hImageAlign="Left" vTextAlign="Top" vImageAlign="Top" markup="styled" pattern="" fontName="Verdana" fontSize="4" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
 	<style name="borda" mode="Transparent" forecolor="#000000" fill="Solid" radius="3" scaleImage="Clip" hTextAlign="Left" hImageAlign="Left" vTextAlign="Top" vImageAlign="Top" markup="none" pattern="" fontName="Verdana" fontSize="5" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="true" isPdfEmbedded="false">
 		<pen lineWidth="0.25"/>
@@ -264,6 +264,9 @@
 	<field name="Prod_Total" class="java.lang.String">
 		<fieldDescription><![CDATA[prod/vProd]]></fieldDescription>
 	</field>
+	<field name="Prod_Orig" class="java.lang.String">
+		<fieldDescription><![CDATA[imposto/ICMS/descendant::orig]]></fieldDescription>
+	</field>
 	<field name="Prod_CSOSN" class="java.lang.String">
 		<fieldDescription><![CDATA[imposto/ICMS/descendant::CSOSN]]></fieldDescription>
 	</field>
@@ -285,9 +288,27 @@
 	<field name="Prod_ValorIPI" class="java.lang.String">
 		<fieldDescription><![CDATA[imposto/IPI/IPITrib/vIPI]]></fieldDescription>
 	</field>
+	<field name="Prod_VeicProd_Chassi" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/veicProd/chassi]]></fieldDescription>
+	</field>
+	<field name="Prod_VeicProd_Pot" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/veicProd/pot]]></fieldDescription>
+	</field>
+	<field name="Prod_VeicProd_TpComb" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/veicProd/tpComb]]></fieldDescription>
+	</field>
+	<field name="Prod_VeicProd_CodigoModelo" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/veicProd/cMod]]></fieldDescription>
+	</field>
+	<field name="Prod_VeicProd_AnoMod" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/veicProd/anoMod]]></fieldDescription>
+	</field>
 	<field name="infAdProd" class="java.lang.String">
 		<property name="net.sf.jasperreports.xpath.field.expression" value="infAdProd"/>
 		<fieldDescription><![CDATA[infAdProd]]></fieldDescription>
+	</field>
+	<field name="Entr_UF" class="java.lang.String">
+		<fieldDescription><![CDATA[../entrega/UF]]></fieldDescription>
 	</field>
 	<variable name="count_itens" class="java.lang.Integer" resetType="None" incrementType="Report" calculation="Count">
 		<variableExpression><![CDATA[$V{REPORT_COUNT}]]></variableExpression>
@@ -721,7 +742,7 @@ $F{Trans_CPF}.substring(9,11) : ""]]></textFieldExpression>
 	<group name="Group2" isReprintHeaderOnEachPage="true">
 		<groupExpression><![CDATA[$F{NumeroNF}]]></groupExpression>
 		<groupHeader>
-			<band height="22">
+			<band height="27">
 				<staticText>
 					<reportElement style="campoPequeno" x="2" y="2" width="563" height="7" uuid="3011ead4-2edc-4309-a005-5de34e5a20c2"/>
 					<textElement>
@@ -743,7 +764,9 @@ $F{Trans_CPF}.substring(9,11) : ""]]></textFieldExpression>
 					<text><![CDATA[CÓDIGO]]></text>
 				</staticText>
 				<staticText>
-					<reportElement style="campoPequeno" x="57" y="9" width="169" height="13" uuid="f607f09b-83b6-4046-b779-94b22015a91a"/>
+					<reportElement style="campoPequeno" x="57" y="9" width="163" height="13" uuid="f607f09b-83b6-4046-b779-94b22015a91a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
 					<box>
 						<topPen lineWidth="0.25"/>
 						<leftPen lineWidth="0.25"/>
@@ -756,7 +779,9 @@ $F{Trans_CPF}.substring(9,11) : ""]]></textFieldExpression>
 					<text><![CDATA[DESCRIÇÃO DOS PRODUTOS / SERVIÇOS]]></text>
 				</staticText>
 				<staticText>
-					<reportElement style="campoPequeno" x="226" y="9" width="35" height="13" uuid="fa210f29-36c1-4678-a90e-e84e12eabcaf"/>
+					<reportElement style="campoPequeno" x="220" y="9" width="35" height="13" uuid="fa210f29-36c1-4678-a90e-e84e12eabcaf">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
 					<box>
 						<topPen lineWidth="0.25"/>
 						<leftPen lineWidth="0.25"/>
@@ -769,7 +794,11 @@ $F{Trans_CPF}.substring(9,11) : ""]]></textFieldExpression>
 					<text><![CDATA[NCM/SH]]></text>
 				</staticText>
 				<staticText>
-					<reportElement style="campoPequeno" x="261" y="9" width="16" height="13" uuid="8923dd96-47fd-4f84-81f3-5efddab8269a"/>
+					<reportElement style="campoPequeno" x="255" y="9" width="22" height="13" uuid="8923dd96-47fd-4f84-81f3-5efddab8269a">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[$F{Prod_CST} != null]]></printWhenExpression>
+					</reportElement>
 					<box>
 						<topPen lineWidth="0.25"/>
 						<leftPen lineWidth="0.25"/>
@@ -779,7 +808,7 @@ $F{Trans_CPF}.substring(9,11) : ""]]></textFieldExpression>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font isBold="true"/>
 					</textElement>
-					<text><![CDATA[CST]]></text>
+					<text><![CDATA[O/CST]]></text>
 				</staticText>
 				<staticText>
 					<reportElement style="campoPequeno" x="277" y="9" width="22" height="13" uuid="f54cdabb-5ae4-4a3c-926c-052a7605e736"/>
@@ -950,6 +979,23 @@ $F{Trans_CPF}.substring(9,11) : ""]]></textFieldExpression>
 						<font isBold="true"/>
 					</textElement>
 					<text><![CDATA[ALIQUOTA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="campoPequeno" x="255" y="9" width="22" height="13" uuid="5111b7ec-e8e3-4550-80ab-df83423587f5">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[$F{Prod_CST} == null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[O/CSOSN]]></text>
 				</staticText>
 			</band>
 		</groupHeader>
@@ -1535,7 +1581,7 @@ $F{Dest_Telefone}.substring(2,7) + "-" + $F{Dest_Telefone}.substring(7,11) :  $F
 					<textElement>
 						<font size="7"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{Dest_Nome}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[StringEscapeUtils.escapeXml11($F{Dest_Nome})]]></textFieldExpression>
 				</textField>
 				<textField pattern="#####-###">
 					<reportElement style="dados" x="412" y="41" width="86" height="16" uuid="26b218d9-253a-4091-9482-b76345612c01"/>
@@ -1612,8 +1658,9 @@ $F{Dest_CPF}.substring(6,9) + "-" + $F{Dest_CPF}.substring(9,11)]]></textFieldEx
 				<textFieldExpression><![CDATA[$F{Prod_Codigo}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="detail" positionType="Float" x="226" y="0" width="35" height="16" uuid="77c9932e-254c-431e-b911-7f8f1063e6d1">
+				<reportElement style="detail" positionType="Float" x="220" y="0" width="35" height="16" uuid="77c9932e-254c-431e-b911-7f8f1063e6d1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<box>
 					<topPen lineWidth="0.25"/>
@@ -1627,8 +1674,10 @@ $F{Dest_CPF}.substring(6,9) + "-" + $F{Dest_CPF}.substring(9,11)]]></textFieldEx
 				<textFieldExpression><![CDATA[$F{Prod_NCM}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="detail" positionType="Float" x="261" y="0" width="16" height="16" uuid="68fd3c3d-0b3a-4a81-8c4b-a61770d9ee08">
+				<reportElement style="detail" positionType="Float" x="255" y="0" width="22" height="16" uuid="68fd3c3d-0b3a-4a81-8c4b-a61770d9ee08">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box>
 					<topPen lineWidth="0.25"/>
@@ -1639,7 +1688,7 @@ $F{Dest_CPF}.substring(6,9) + "-" + $F{Dest_CPF}.substring(9,11)]]></textFieldEx
 				<textElement textAlignment="Center">
 					<font size="5"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{Prod_CST} == null ? $F{Prod_CSOSN} : $F{Prod_CST}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{Prod_Orig}+" "+ ($F{Prod_CST} == null ? $F{Prod_CSOSN} : $F{Prod_CST})]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="detail" positionType="Float" x="299" y="0" width="20" height="16" uuid="ac4e8ce9-2b0e-4fea-b61c-2c75eaabd3b4">
@@ -1793,8 +1842,9 @@ $F{Dest_CPF}.substring(6,9) + "-" + $F{Dest_CPF}.substring(9,11)]]></textFieldEx
 				<textFieldExpression><![CDATA[$F{Prod_ValorICMS} == null ? Double.parseDouble("0.00") : Double.parseDouble($F{Prod_ValorICMS})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement style="detail" x="57" y="0" width="169" height="16" uuid="ebbbbb67-040b-4bf4-a335-292a5667880f">
+				<reportElement style="detail" x="57" y="0" width="163" height="16" uuid="ebbbbb67-040b-4bf4-a335-292a5667880f">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box leftPadding="1">
 					<topPen lineWidth="0.25"/>
