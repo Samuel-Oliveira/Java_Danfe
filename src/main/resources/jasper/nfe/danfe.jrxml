@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="danfe" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="565" leftMargin="14" rightMargin="16" topMargin="14" bottomMargin="14" uuid="916f4b39-302a-4df3-b709-5d818c10c0ee">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="322"/>
 	<property name="ireport.y" value="160"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NF-e"/>
-	<import value="org.apache.commons.text.StringEscapeUtils"/>
 	<style name="campoPequeno" hTextAlign="Left" hImageAlign="Left" vTextAlign="Top" vImageAlign="Top" markup="styled" pattern="" fontName="Verdana" fontSize="4" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
 	<style name="borda" mode="Transparent" forecolor="#000000" fill="Solid" radius="3" scaleImage="Clip" hTextAlign="Left" hImageAlign="Left" vTextAlign="Top" vImageAlign="Top" markup="none" pattern="" fontName="Verdana" fontSize="5" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="true" isPdfEmbedded="false">
 		<pen lineWidth="0.25"/>
@@ -26,7 +25,10 @@
 	<parameter name="Logo" class="java.io.InputStream" isForPrompting="false">
 		<parameterDescription><![CDATA[Imagem do logo da empresa.]]></parameterDescription>
 	</parameter>
-	<parameter name="SUBREPORT" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="SUBREPORT" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="EXPRESSION_SUBREPORT" class="java.lang.String">
+		<defaultValueExpression><![CDATA["/nfeProc/NFe/infNFe/cobr/dup"]]></defaultValueExpression>
+	</parameter>
 	<queryString language="xPath">
 		<![CDATA[/nfeProc/NFe/infNFe/det]]>
 	</queryString>
@@ -1122,7 +1124,7 @@ $F{Trans_CPF}.substring(9,11) : ""]]></textFieldExpression>
 					<textElement>
 						<font fontName="Verdana" size="4"/>
 					</textElement>
-					<textFieldExpression><![CDATA["RECEBEMOS DE " + StringEscapeUtils.escapeXml11($F{Emi_Nome}.toUpperCase()) + " OS PRODUTOS CONSTANTES NA NOTA FISCAL INDICADA AO LADO."]]></textFieldExpression>
+					<textFieldExpression><![CDATA["RECEBEMOS DE " + $F{Emi_Nome}.toUpperCase() + " OS PRODUTOS CONSTANTES NA NOTA FISCAL INDICADA AO LADO."]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
@@ -1341,7 +1343,7 @@ $F{Chave}.substring(36,40) + " " + $F{Chave}.substring(40,44) + " "]]></textFiel
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Verdana" size="10" isBold="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA[StringEscapeUtils.escapeXml11($F{Emi_Nome})]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{Emi_Nome}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement style="dados" positionType="Float" x="67" y="31" width="201" height="48" uuid="20a6c419-7ae2-4f66-b90c-433b4bbde074"/>
@@ -1581,7 +1583,7 @@ $F{Dest_CPF}.substring(6,9) + "-" + $F{Dest_CPF}.substring(9,11)]]></textFieldEx
 				</rectangle>
 				<subreport>
 					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="2" y="0" width="563" height="24" uuid="819c7673-cd23-4127-b4a1-fdcce15222ff"/>
-					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/nfeProc/NFe/infNFe/cobr/dup")]]></dataSourceExpression>
+					<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource($P{EXPRESSION_SUBREPORT})]]></dataSourceExpression>
 					<subreportExpression><![CDATA[$P{SUBREPORT}]]></subreportExpression>
 				</subreport>
 			</frame>

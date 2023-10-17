@@ -1,3 +1,7 @@
 /.idea/
 /java-danfe.iml
 /target/
+
+# netbeans
+nbactions.xml
+nb-configuration.xml

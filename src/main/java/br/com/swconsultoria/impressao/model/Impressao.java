@@ -1,5 +1,7 @@
 package br.com.swconsultoria.impressao.model;
 
+import net.sf.jasperreports.engine.JasperReport;
+
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +12,7 @@ import java.util.Map;
 public class Impressao {
 
     private String xml;
-    private InputStream jasper;
+    private JasperReport jasper;
     private String pathExpression;
     private Map<String, Object> parametros;
 
@@ -22,11 +24,11 @@ public class Impressao {
         this.xml = xml;
     }
 
-    public InputStream getJasper() {
+    public JasperReport getJasper() {
         return jasper;
     }
 
-    public void setJasper(InputStream jasper) {
+    public void setJasper(JasperReport jasper) {
         this.jasper = jasper;
     }
 

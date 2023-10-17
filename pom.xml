@@ -53,27 +53,19 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports</artifactId>
-            <version>6.12.0</version>
+            <version>6.20.6</version>
             <exclusions>
                 <exclusion>
                     <artifactId>bcprov-jdk14</artifactId>
                     <groupId>bouncycastle</groupId>
                 </exclusion>
-                <exclusion>
-                    <groupId>com.lowagie</groupId>
-                    <artifactId>itext</artifactId>
-                </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>com.lowagie</groupId>
-            <artifactId>itext</artifactId>
-            <version>2.1.7</version>
-        </dependency>
+
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports-fonts</artifactId>
-            <version>6.12.0</version>
+            <version>6.20.6</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -85,6 +77,7 @@
             <artifactId>xalan</artifactId>
             <version>2.7.2</version>
         </dependency>
+        
         <dependency>
             <groupId>net.sourceforge.barbecue</groupId>
             <artifactId>barbecue</artifactId>
@@ -101,14 +94,31 @@
             <version>3.2.1</version>
         </dependency>
         <dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.5</version>
-		</dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+        </dependency>
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf-extras</artifactId>
+            <version>3.1.1</version>
+        </dependency>
     </dependencies>
 
     <build>
-        <plugins>
+        <plugins>          
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -155,18 +165,53 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4</version>
+                <version>3.1.1</version>
                 <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>br.com.swconsultoria.impressao.view.Principal</mainClass>
+                        </manifest>
+                    </archive>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <appendAssemblyId>true</appendAssemblyId>
                 </configuration>
                 <executions>
                     <execution>
-                        <phase>none</phase>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>exec-install-file</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>mvn</executable>
+                            <arguments>
+                                <argument>org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file</argument>
+                                <argument>-Dfile=${project.build.directory}/${project.build.finalName}.jar</argument>
+                                <argument>-DgroupId=br.com.swconsultoria</argument>
+                                <argument>-DartifactId=java-danfe</argument>
+                                <argument>-Dversion=${project.version}</argument>
+                                <argument>-Dpackaging=jar</argument>
+                                <argument>-DlocalRepositoryPath=${project.build.directory}/repository</argument>
+                            </arguments>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

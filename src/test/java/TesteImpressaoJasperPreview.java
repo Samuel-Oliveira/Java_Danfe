@@ -8,7 +8,7 @@ public class TesteImpressaoJasperPreview {
     public static void main(String[] args) {
         try {
             //Faça a leitura do Arquivo
-            String xml = ImpressaoUtil.leArquivo("/d/teste/nfe.xml");
+            String xml = ImpressaoUtil.leArquivo("D:\\teste\\nfe.xml");
 
             //Aqui está pegando o Layout Padrão
             Impressao impressao = ImpressaoUtil.impressaoPadraoNFe(xml);
