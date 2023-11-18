@@ -2,6 +2,8 @@ package br.com.swconsultoria.impressao.util;
 
 import br.com.swconsultoria.impressao.model.Impressao;
 import br.com.swconsultoria.impressao.service.ImpressaoService;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,6 +13,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.StringJoiner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
@@ -82,7 +86,16 @@ public class ImpressaoUtil {
         impressaoNFe.setXml(xml);
         impressaoNFe.setPathExpression("/nfeProc/NFe/infNFe/det");
         impressaoNFe.setJasper(loader.loadJasperFile("nfe", "danfe.jasper"));
-        impressaoNFe.getParametros().put("Logo", ImpressaoService.class.getResourceAsStream("/img/nfe.jpg"));
+        File logo = new File("nfe.png");
+        if(logo.exists()){
+            try {
+                impressaoNFe.getParametros().put("Logo", new FileInputStream(logo.getPath()));
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(ImpressaoUtil.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }else{
+            impressaoNFe.getParametros().put("Logo", ImpressaoService.class.getResourceAsStream("/img/nfe.jpg"));
+        }
         impressaoNFe.getParametros().put("SUBREPORT", loader.loadJasperFile("nfe", "danfe_fatura.jasper"));
         return impressaoNFe;
     }
@@ -98,7 +111,16 @@ public class ImpressaoUtil {
         impressaoNFCe.setXml(xml);
         impressaoNFCe.setPathExpression("/");
         impressaoNFCe.setJasper(loader.loadJasperFile("nfce", "danfce.jasper"));
-        impressaoNFCe.getParametros().put("Logo", ImpressaoService.class.getResourceAsStream("/img/nfe.jpg"));
+        File logo = new File("nfe.png");
+        if(logo.exists()){
+            try {
+                impressaoNFCe.getParametros().put("Logo", new FileInputStream(logo.getPath()));
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(ImpressaoUtil.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }else{
+            impressaoNFCe.getParametros().put("Logo", ImpressaoService.class.getResourceAsStream("/img/nfe.jpg"));
+        }
         impressaoNFCe.getParametros().put("UrlConsulta", urlConsulta);
         return impressaoNFCe;
     }
