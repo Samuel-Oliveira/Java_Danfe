@@ -86,10 +86,10 @@ public class ImpressaoUtil {
         impressaoNFe.setXml(xml);
         impressaoNFe.setPathExpression("/nfeProc/NFe/infNFe/det");
         impressaoNFe.setJasper(loader.loadJasperFile("nfe", "danfe.jasper"));
-        File logo = new File("nfe.png");
-        if(logo.exists()){
+        File logoPersonalizada = new File("logoNFe.png");
+        if(logoPersonalizada.exists()){
             try {
-                impressaoNFe.getParametros().put("Logo", new FileInputStream(logo.getPath()));
+                impressaoNFe.getParametros().put("Logo", new FileInputStream(logoPersonalizada.getPath()));
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(ImpressaoUtil.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -111,10 +111,10 @@ public class ImpressaoUtil {
         impressaoNFCe.setXml(xml);
         impressaoNFCe.setPathExpression("/");
         impressaoNFCe.setJasper(loader.loadJasperFile("nfce", "danfce.jasper"));
-        File logo = new File("nfe.png");
-        if(logo.exists()){
+        File logoPersonalizada = new File("logoNFe.png");
+        if(logoPersonalizada.exists()){
             try {
-                impressaoNFCe.getParametros().put("Logo", new FileInputStream(logo.getPath()));
+                impressaoNFCe.getParametros().put("Logo", new FileInputStream(logoPersonalizada.getPath()));
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(ImpressaoUtil.class.getName()).log(Level.SEVERE, null, ex);
             }

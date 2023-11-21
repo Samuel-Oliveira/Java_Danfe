@@ -2,7 +2,6 @@ package br.com.swconsultoria.impressao.model;
 
 import net.sf.jasperreports.engine.JasperReport;
 
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
