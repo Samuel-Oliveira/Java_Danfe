@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.12.0.final using JasperReports Library version 6.12.1-ac0eebdb29e4c0985457bab279a6db744d661530  -->
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DACTE" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="77396255-000d-47de-a0d4-28e629551bba">
 	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="24"/>
 	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="965"/>
@@ -2025,14 +2025,14 @@ $F{ICMS_vBCSTRet} != null ? java.text.NumberFormat.getCurrencyInstance(new Local
 $F{ICMS_vBCOutraUF} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vBCOutraUF})) :
 ""]]></textFieldExpression>
 				</textField>
-				<textField isBlankWhenNull="true">
+				<textField pattern="#0.00%" isBlankWhenNull="true">
 					<reportElement positionType="Float" x="364" y="20" width="58" height="8" uuid="27f801a8-ff82-4f00-93a1-b14bec46b08c"/>
 					<textElement textAlignment="Right">
 						<font size="6"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{ICMS_pICMS} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_pICMS})) :
-$F{ICMS_pICMSSTRet} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_pICMSSTRet})) :
-$F{ICMS_pICMSOutraUF} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_pICMSOutraUF})) :
+					<textFieldExpression><![CDATA[$F{ICMS_pICMS} != null ? Double.parseDouble($F{ICMS_pICMS}) :
+$F{ICMS_pICMSSTRet} != null ? Double.parseDouble($F{ICMS_pICMSSTRet}) :
+$F{ICMS_pICMSOutraUF} != null ? Double.parseDouble($F{ICMS_pICMSOutraUF}) :
 ""]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
@@ -2045,12 +2045,12 @@ $F{ICMS_vICMSSTRet} != null ? java.text.NumberFormat.getCurrencyInstance(new Loc
 $F{ICMS_vICMSOutraUF} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vICMSOutraUF})) :
 ""]]></textFieldExpression>
 				</textField>
-				<textField isBlankWhenNull="true">
+				<textField pattern="#0.00%" isBlankWhenNull="true">
 					<reportElement positionType="Float" x="489" y="20" width="51" height="8" uuid="61664985-f422-4612-ae09-5636597065b4"/>
 					<textElement textAlignment="Right">
 						<font size="6"/>
 					</textElement>
-					<textFieldExpression><![CDATA[java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble("0.00"))]]></textFieldExpression>
+					<textFieldExpression><![CDATA[Double.parseDouble("0.00")]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>
