@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.swconsultoria</groupId>
     <artifactId>java-danfe</artifactId>
-    <version>1.6-SNAPSHOT</version>
+    <version>1.6</version>
     <name>Java_Danfe</name>
     <description>Biblioteca para impressão de Documentos Fiscais</description>
     <url>https://github.com/Samuel-Oliveira/Java_Danfe</url>
@@ -19,7 +19,7 @@
         <url>git@github.com:Samuel-Oliveira/Java_Danfe.git</url>
         <connection>scm:git:git@github.com:Samuel-Oliveira/Java_Danfe.git</connection>
         <developerConnection>scm:git:git@github.com:Samuel-Oliveira/Java_Danfe.git</developerConnection>
-        <tag>java-danfe-1.0</tag>
+        <tag>java-danfe-1.6</tag>
     </scm>
 
     <properties>
