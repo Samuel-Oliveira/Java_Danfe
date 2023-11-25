@@ -2,7 +2,6 @@ package br.com.swconsultoria.impressao.model;
 
 import net.sf.jasperreports.engine.JasperReport;
 
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,7 +40,7 @@ public class Impressao {
     }
 
     public Map<String, Object> getParametros() {
-        if(this.parametros == null){
+        if (this.parametros == null) {
             this.parametros = new HashMap<>();
         }
         return parametros;

@@ -44,17 +44,17 @@
 			<fieldDescription><![CDATA[vComp]]></fieldDescription>
 		</field>
 	</subDataset>
-	<parameter name="Logotipo" class="java.lang.String" isForPrompting="false">
+	<parameter name="Logotipo" class="java.io.InputStream" isForPrompting="false">
 		<parameterDescription><![CDATA[Local onde está  a imagem do logo da empresa.]]></parameterDescription>
 	</parameter>
 	<parameter name="protocoloEncerramento" class="java.lang.String"/>
 	<parameter name="qtdVolumes" class="java.lang.String" isForPrompting="false"/>
 	<parameter name="protocoloCancelamento" class="java.lang.String"/>
-	<parameter name="SubPrestacaoServico" class="java.io.InputStream" isForPrompting="false"/>
-	<parameter name="SubDocumentosOriginariosNF" class="java.io.InputStream" isForPrompting="false"/>
-	<parameter name="SubDocumentosOriginariosNFe" class="java.io.InputStream" isForPrompting="false"/>
-	<parameter name="SubDocumentosOriginariosOutros" class="java.io.InputStream" isForPrompting="false"/>
-	<parameter name="SubVeiculosNovos" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="SubPrestacaoServico" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SubDocumentosOriginariosNF" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SubDocumentosOriginariosNFe" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SubDocumentosOriginariosOutros" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SubVeiculosNovos" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
 	<queryString language="XPath">
 		<![CDATA[/cteProc/CTe/infCte/infCTeNorm]]>
 	</queryString>
@@ -1972,10 +1972,10 @@ $F{ICMS_CST} + "....."]]></textFieldExpression>
 				</staticText>
 				<staticText>
 					<reportElement positionType="Float" x="364" y="12" width="58" height="8" uuid="906068e3-6466-4b5b-8e3d-4b9f0f782788"/>
-					<textElement textAlignment="Left">
-						<font size="5.5"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="5"/>
 					</textElement>
-					<text><![CDATA[ALÍQUOTA DO ICMS]]></text>
+					<text><![CDATA[% ALÍQUOTA DO ICMS]]></text>
 				</staticText>
 				<staticText>
 					<reportElement positionType="Float" x="262" y="12" width="97" height="8" uuid="3b4dfbf1-1b6f-4768-b594-b7b60c1e7bfe"/>
@@ -2025,12 +2025,12 @@ $F{ICMS_vBCSTRet} != null ? java.text.NumberFormat.getCurrencyInstance(new Local
 $F{ICMS_vBCOutraUF} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vBCOutraUF})) :
 ""]]></textFieldExpression>
 				</textField>
-				<textField pattern="#0.00%" isBlankWhenNull="true">
+				<textField pattern="#0.00" isBlankWhenNull="true">
 					<reportElement positionType="Float" x="364" y="20" width="58" height="8" uuid="27f801a8-ff82-4f00-93a1-b14bec46b08c"/>
 					<textElement textAlignment="Right">
 						<font size="6"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{ICMS_pICMS} != null ? Double.parseDouble($F{ICMS_pICMS}) :
+					<textFieldExpression><![CDATA[$F{ICMS_pICMS} != null ?  Double.parseDouble($F{ICMS_pICMS}) :
 $F{ICMS_pICMSSTRet} != null ? Double.parseDouble($F{ICMS_pICMSSTRet}) :
 $F{ICMS_pICMSOutraUF} != null ? Double.parseDouble($F{ICMS_pICMSOutraUF}) :
 ""]]></textFieldExpression>
@@ -2045,7 +2045,7 @@ $F{ICMS_vICMSSTRet} != null ? java.text.NumberFormat.getCurrencyInstance(new Loc
 $F{ICMS_vICMSOutraUF} != null ? java.text.NumberFormat.getCurrencyInstance(new Locale("pt","br")).format(Double.parseDouble($F{ICMS_vICMSOutraUF})) :
 ""]]></textFieldExpression>
 				</textField>
-				<textField pattern="#0.00%" isBlankWhenNull="true">
+				<textField pattern="#0.00" isBlankWhenNull="true">
 					<reportElement positionType="Float" x="489" y="20" width="51" height="8" uuid="61664985-f422-4612-ae09-5636597065b4"/>
 					<textElement textAlignment="Right">
 						<font size="6"/>

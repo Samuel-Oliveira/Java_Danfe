@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DAMDFE" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="b71767cf-4ae5-4d70-909a-ef693c44a965">
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="24"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="965"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<subDataset name="infNFe" uuid="d23aff8c-7b83-4089-a641-0865d7eb751c">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="chNFe" class="java.lang.String">
+			<fieldDescription><![CDATA[chNFe]]></fieldDescription>
+		</field>
+		<field name="infUnidTransp_tpUnidTransp" class="java.lang.String">
+			<fieldDescription><![CDATA[infUnidTransp/tpUnidTransp]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="infUnidTransp" uuid="f65591f1-f1bc-47f8-815f-fd5416522461">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="tpUnidTransp" class="java.lang.String">
+			<fieldDescription><![CDATA[tpUnidTransp]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="infUnidCarga" uuid="2fd7bccd-9845-4747-a5e5-85534951e6fa">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="tpUnidCarga" class="java.lang.String">
+			<fieldDescription><![CDATA[tpUnidCarga]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="infCTe" uuid="b3cc83ef-b559-4704-9c2d-35585b6627b6">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="chCTe" class="java.lang.String">
+			<fieldDescription><![CDATA[chCTe]]></fieldDescription>
+		</field>
+		<field name="infUnidTransp_tpUnidTransp" class="java.lang.String">
+			<fieldDescription><![CDATA[infUnidTransp/tpUnidTransp]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="condutor" uuid="8ed38015-593e-4592-91af-e19a479629e1">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="CPF" class="java.lang.String">
+			<fieldDescription><![CDATA[CPF]]></fieldDescription>
+		</field>
+		<field name="xNome" class="java.lang.String">
+			<fieldDescription><![CDATA[xNome]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="valePed" uuid="33b1dd2e-f0ce-4cb7-9660-1abe3fb7c2ae">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="CNPJForn" class="java.lang.String">
+			<fieldDescription><![CDATA[CNPJForn]]></fieldDescription>
+		</field>
+		<field name="CNPJPg" class="java.lang.String">
+			<fieldDescription><![CDATA[CNPJPg]]></fieldDescription>
+		</field>
+		<field name="CPFPg" class="java.lang.String">
+			<fieldDescription><![CDATA[CPFPg]]></fieldDescription>
+		</field>
+		<field name="nCompra" class="java.lang.String">
+			<fieldDescription><![CDATA[nCompra]]></fieldDescription>
+		</field>
+		<field name="vValePed" class="java.lang.String">
+			<fieldDescription><![CDATA[vValePed]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="veic" uuid="370ac614-d724-48cd-a06d-e255952f1c8f">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<parameter name="RNTRC_EMPRESA" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="placa" class="java.lang.String">
+			<fieldDescription><![CDATA[placa]]></fieldDescription>
+		</field>
+		<field name="RNTRC" class="java.lang.String">
+			<fieldDescription><![CDATA[prop/RNTRC]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="Logotipo" class="java.io.InputStream">
+		<parameterDescription><![CDATA[Local onde está  a imagem do logo da empresa.]]></parameterDescription>
+	</parameter>
+	<queryString language="XPath">
+		<![CDATA[/]]>
+	</queryString>
+	<field name="emit_CNPJ" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/CNPJ]]></fieldDescription>
+	</field>
+	<field name="emit_IE" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/IE]]></fieldDescription>
+	</field>
+	<field name="emit_xNome" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/xNome]]></fieldDescription>
+	</field>
+	<field name="emit_xFant" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/xFant]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_xLgr" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/enderEmit/xLgr]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_nro" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/enderEmit/nro]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_xBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/enderEmit/xBairro]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_xMun" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/enderEmit/xMun]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_CEP" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/enderEmit/CEP]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_UF" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/enderEmit/UF]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_fone" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/enderEmit/fone]]></fieldDescription>
+	</field>
+	<field name="emit_enderEmit_email" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/emit/enderEmit/email]]></fieldDescription>
+	</field>
+	<field name="rodo_infANTT_RNTRC" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/infModal/rodo/infANTT/RNTRC]]></fieldDescription>
+	</field>
+	<field name="ide_cUF" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/cUF]]></fieldDescription>
+	</field>
+	<field name="ide_tpAmb" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/tpAmb]]></fieldDescription>
+	</field>
+	<field name="ide_tpEmit" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/tpEmit]]></fieldDescription>
+	</field>
+	<field name="ide_mod" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/mod]]></fieldDescription>
+	</field>
+	<field name="ide_serie" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/serie]]></fieldDescription>
+	</field>
+	<field name="ide_nMDF" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/nMDF]]></fieldDescription>
+	</field>
+	<field name="ide_dhEmi" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/dhEmi]]></fieldDescription>
+	</field>
+	<field name="ide_tpEmis" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/tpEmis]]></fieldDescription>
+	</field>
+	<field name="ide_procEmi" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/procEmi]]></fieldDescription>
+	</field>
+	<field name="ide_verProc" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/verProc]]></fieldDescription>
+	</field>
+	<field name="ide_UFIni" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/UFIni]]></fieldDescription>
+	</field>
+	<field name="ide_UFFim" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/ide/UFFim]]></fieldDescription>
+	</field>
+	<field name="tot_qCTe" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/tot/qCTe]]></fieldDescription>
+	</field>
+	<field name="tot_qNFe" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/tot/qNFe]]></fieldDescription>
+	</field>
+	<field name="tot_qCarga" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/tot/qCarga]]></fieldDescription>
+	</field>
+	<field name="protMDFe_infProt_chMDFe" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/protMDFe/infProt/chMDFe]]></fieldDescription>
+	</field>
+	<field name="protMDFe_infProt_dhRecbto" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/protMDFe/infProt/dhRecbto]]></fieldDescription>
+	</field>
+	<field name="protMDFe_infProt_nProt" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/protMDFe/infProt/nProt]]></fieldDescription>
+	</field>
+	<field name="protMDFe_infProt_cStat" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/protMDFe/infProt/cStat]]></fieldDescription>
+	</field>
+	<field name="infAdic_infCpl" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/infAdic/infCpl]]></fieldDescription>
+	</field>
+	<field name="infMDFeSupl_qrCodMDFe" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFeSupl/qrCodMDFe]]></fieldDescription>
+	</field>
+	<field name="veicTracao_placa" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/infModal/rodo/veicTracao/placa]]></fieldDescription>
+	</field>
+	<field name="veicTracao_prop_RNTRC" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/infModal/rodo/veicTracao/prop/RNTRC]]></fieldDescription>
+	</field>
+	<field name="infDoc_infMunDescarga_xMunDescarga" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/infDoc/infMunDescarga/xMunDescarga]]></fieldDescription>
+	</field>
+	<field name="infDoc_infMunDescarga_infNFe_chNFe" class="java.lang.String">
+		<fieldDescription><![CDATA[/mdfeProc/MDFe/infMDFe/infDoc/infMunDescarga/infNFe/chNFe]]></fieldDescription>
+	</field>
+	<variable name="V_CURRENT_PAGE_NUMBER" class="java.lang.Integer" resetType="Page">
+		<variableExpression><![CDATA[1]]></variableExpression>
+		<initialValueExpression><![CDATA[$V{PAGE_NUMBER} + 1]]></initialValueExpression>
+	</variable>
+	<background>
+		<band height="609" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="2" y="15" width="559" height="594" forecolor="#CCCCCC" uuid="2ec0a283-89eb-4302-ac44-45dd14349788"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font size="40" isBold="true" isItalic="false" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{ide_tpAmb}.equals( "2" )) || ($F{ide_tpAmb}.equals( "1" ) && $F{protMDFe_infProt_nProt} == null) ? "EMITIDO EM AMBIENTE DE HOMOLOGAÇÃO – SEM VALOR FISCAL" : "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band height="12" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="419" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+			<image>
+				<reportElement x="1" y="1" width="80" height="80" uuid="3a26c008-13dd-4bd3-b13e-600207983616"/>
+				<imageExpression><![CDATA[$P{Logotipo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="84" y="2" width="342" height="33" uuid="414debbc-99ce-406c-aa89-424b13e41578"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emit_xNome} + "\n" + (($F{emit_xFant} != null && $F{emit_xFant}.equals($F{emit_xNome})) ? "" : $F{emit_xFant} == null ? "" : $F{emit_xFant})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="35" width="343" height="33" uuid="a7eadbe0-8678-4edb-b11c-6fb660c96583"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emit_enderEmit_xLgr} + ", " +  $F{emit_enderEmit_nro} + "\n"
++ $F{emit_enderEmit_xBairro} + "\n"
++ "Telefone: " + (($F{emit_enderEmit_fone} != null && $F{emit_enderEmit_fone}.length() == 10) ?
+("(" + ($F{emit_enderEmit_fone}.substring(0,2).trim()) + ") " + $F{emit_enderEmit_fone}.substring(2,6) + "-" + $F{emit_enderEmit_fone}.substring(6,10)) : $F{emit_enderEmit_fone})]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="450" y="1" width="110" height="110" uuid="8d01d9ee-2197-4dd3-b684-a0fcf19554ff"/>
+				<imageExpression><![CDATA[com.google.zxing.client.j2se.MatrixToImageWriter.toBufferedImage(
+     new com.google.zxing.qrcode.QRCodeWriter().encode($F{infMDFeSupl_qrCodMDFe},
+         com.google.zxing.BarcodeFormat.QR_CODE, 350, 350))]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="84" y="68" width="343" height="15" uuid="1532e057-bc37-447f-936e-e04ffbf3a754"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emit_enderEmit_xMun} + " - " + $F{emit_enderEmit_UF}  + "        CEP: " +  $F{emit_enderEmit_CEP}.substring(0,5) + "-" +  $F{emit_enderEmit_CEP}.substring(5,8)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="84" y="84" width="32" height="13" uuid="58bebfd1-7812-4ebc-b893-1878416df045"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CNPJ:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="116" y="84" width="92" height="13" uuid="73fb57f1-413e-40f4-be05-ceac5f93f653"/>
+				<textFieldExpression><![CDATA[$F{emit_CNPJ}.substring(0,2) + "." + $F{emit_CNPJ}.substring(2,5) + "." +
+$F{emit_CNPJ}.substring(5,8) + "/" + $F{emit_CNPJ}.substring(8,12) + "-" +
+$F{emit_CNPJ}.substring(12,14)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="209" y="84" width="15" height="13" uuid="51dcfb38-6ba6-4614-ae7f-49b91ee6b308"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[IE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="223" y="84" width="86" height="13" uuid="65463401-8190-4d21-9f31-0680df370e9d"/>
+				<textFieldExpression><![CDATA[$F{emit_IE}== null ? "" : $F{emit_IE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="84" width="76" height="13" uuid="0675608b-909b-431b-88a1-34717a50f158"/>
+				<textFieldExpression><![CDATA[$F{rodo_infANTT_RNTRC}== null ? "" : $F{rodo_infANTT_RNTRC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="309" y="84" width="42" height="13" uuid="1119325c-3fc1-4173-baae-116fe4327112"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RNTRC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="104" width="55" height="17" uuid="673f3c3c-9b59-4f93-a0d1-bc64ffeebbb4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DAMDFE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="104" width="371" height="17" uuid="c2c997f1-f690-4c78-b14d-914548f758a5"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[- Documento Auxiliar de Manifesto Eletrônico de Documentos Fiscais]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="124" width="175" height="43" backcolor="#C0E0F7" uuid="cb86ecde-9e72-4b2c-bd2e-54cd9893fc8a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="126" width="34" height="15" uuid="b7b7fa12-8c1f-4ee6-9a18-b18f461b5cd6"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Modelo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="126" width="34" height="15" uuid="78365a08-1ba7-4320-ae58-ab48327f70bf"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Série]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="126" width="39" height="15" uuid="7fcd9d59-d47b-4e2a-8c55-b79ac7809de1"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Número]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="6" y="146" width="34" height="19" uuid="8b578ef5-8cf4-4dce-999c-e79d91c22bda"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_mod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="48" y="146" width="34" height="19" uuid="21e93258-134f-4db4-8786-2072356df83b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_serie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="146" width="77" height="19" uuid="f2336d47-2a3d-42e8-8b68-edeb42a65ff1"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_nMDF}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="181" y="124" width="43" height="43" backcolor="#C0E0F7" uuid="b6ec3271-dd19-4b4f-aa4b-06e0b6a32719"/>
+			</rectangle>
+			<textField evaluationTime="Auto">
+				<reportElement x="185" y="146" width="34" height="19" uuid="dbe5725c-c994-4e1c-bd21-0a17b6842dbf"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[msg("{0}/{1}", $V{V_CURRENT_PAGE_NUMBER}, $V{PAGE_NUMBER})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="185" y="126" width="34" height="15" uuid="6605f7cb-75df-4ad9-938c-678fadea76c7"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[FL]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="229" y="124" width="157" height="43" backcolor="#C0E0F7" uuid="93c77432-cd41-4a53-af07-b817b36ae31e"/>
+			</rectangle>
+			<textField>
+				<reportElement x="233" y="146" width="143" height="19" uuid="1db94f6d-3e20-429b-8d87-650b1f4f1be8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{ide_dhEmi} != null ? new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse($F{ide_dhEmi})) : null)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="233" y="126" width="143" height="15" uuid="a32fd0ff-7676-48cc-b379-a697c0c91ef0"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Data e hora de Emissão]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="390" y="124" width="76" height="43" backcolor="#C0E0F7" uuid="326d64e8-0d94-4984-a298-8a9ef2bda2bd"/>
+			</rectangle>
+			<textField>
+				<reportElement x="394" y="146" width="34" height="19" uuid="4f8959f9-66d4-4dc1-a5d6-4c65b56eec1e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_UFIni}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="394" y="126" width="70" height="15" uuid="872cc2db-e3a2-4173-a44c-2e50b437b6d2"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[UF Carreg.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="471" y="124" width="76" height="43" backcolor="#C0E0F7" uuid="56997e6d-2d54-442c-84fe-8528d7c72232"/>
+			</rectangle>
+			<textField>
+				<reportElement x="475" y="146" width="34" height="19" uuid="2aeb8abf-c1e2-40c1-8e79-9a3a62df8ffb"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_UFFim}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="475" y="126" width="70" height="15" uuid="3aa285b5-8b3c-4921-b026-11f9c2ce8230"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[UF Descarreg.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="175" width="222" height="20" uuid="e7cc7440-330b-4b5e-81b3-308b611917c1"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Modelo Rodoviário de Carga]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="2" y="198" width="60" height="43" backcolor="#EAECEE" uuid="9f23d6c5-636b-4e36-b75f-890187effa8b"/>
+			</rectangle>
+			<textField>
+				<reportElement x="6" y="220" width="50" height="19" uuid="ccc8bbe1-b1ea-41b4-88ae-293bb73a16e2"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tot_qCTe} == null ? "0" : $F{tot_qCTe}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="6" y="200" width="50" height="15" uuid="a889c4d0-0f33-4eb5-8b1e-a2dce70d9d7a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Qtd. CTe]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="68" y="198" width="60" height="43" backcolor="#EAECEE" uuid="e87299c4-e4ba-4f3c-8b12-f4a5e88777b6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="72" y="200" width="50" height="15" uuid="ed11d9e2-49f2-4781-9b8a-3bc755f4cb9f"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Qtd. NFe]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="220" width="50" height="19" uuid="98637bb6-c127-44ad-ba23-c82ce5143521"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tot_qNFe} == null ? "0" : $F{tot_qNFe}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="134" y="198" width="89" height="43" backcolor="#EAECEE" uuid="dafdb636-4dbe-402a-93c2-92b47bddd36f"/>
+			</rectangle>
+			<textField>
+				<reportElement x="138" y="220" width="80" height="19" uuid="fbbf776d-3792-4d5c-8e02-be9ffdb23c0a"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tot_qCarga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="138" y="200" width="80" height="15" uuid="3c365c9f-ff40-4a10-8b2b-a418ff3b75c0"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Peso total (Kg)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="177" width="160" height="15" uuid="e26dbc23-b436-45ed-90d0-1faf580067a7"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CONTROLE DO FISCO]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" mode="Transparent" x="253" y="203" width="293" height="60" uuid="485435e2-77d6-4124-abbb-2969908d1953">
+					<property name="com.jaspersoft.studio.unit.barWidth" value="pixel"/>
+					<printWhenExpression><![CDATA[$F{protMDFe_infProt_chMDFe}!=null]]></printWhenExpression>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128C" drawText="false" checksumRequired="true" barWidth="0" barHeight="0">
+					<jr:codeExpression><![CDATA[$F{protMDFe_infProt_chMDFe}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="1" y="263" width="244" height="15" uuid="5915634c-f75f-479a-a165-c404e65aed17"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Protocolo de autorização]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="276" width="244" height="13" uuid="f350443f-8cf1-4f9c-89fb-e1ecc8a02e02"/>
+				<textFieldExpression><![CDATA[($F{protMDFe_infProt_nProt} != null ? $F{protMDFe_infProt_nProt} : " **SEM AUTORIZACAO** ") + " às " + ($F{protMDFe_infProt_dhRecbto} != null ? new SimpleDateFormat("dd/MM/yyyy HH:mm:ss XXX").format(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse($F{protMDFe_infProt_dhRecbto})) : "")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="263" width="289" height="15" uuid="d5711474-d38d-4876-903c-12bcce938039"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chave de Acesso]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="261" y="276" width="289" height="13" uuid="6627bc3f-39ae-4280-a6ee-c3e48d4eed54"/>
+				<textFieldExpression><![CDATA[$F{protMDFe_infProt_chMDFe}.substring(0,4) + " " + $F{protMDFe_infProt_chMDFe}.substring(4,8) + " " + $F{protMDFe_infProt_chMDFe}.substring(8,12) + " " +
+$F{protMDFe_infProt_chMDFe}.substring(12,16) + " " + $F{protMDFe_infProt_chMDFe}.substring(16,20) + " " + $F{protMDFe_infProt_chMDFe}.substring(20,24) + " " +
+$F{protMDFe_infProt_chMDFe}.substring(24,28) + " " + $F{protMDFe_infProt_chMDFe}.substring(28,32) + " " + $F{protMDFe_infProt_chMDFe}.substring(32,36) + " " +
+$F{protMDFe_infProt_chMDFe}.substring(36,40) + " " + $F{protMDFe_infProt_chMDFe}.substring(40,44) + " "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="308" width="194" height="15" uuid="4930699d-5d22-42dd-927e-10cb8e965900"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Veículo]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="336" width="231" height="1" uuid="ac595892-3f4d-4f29-8b97-b7b68bfff3fe"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="375" width="194" height="15" uuid="80f04f82-7242-4ca5-841c-b6da7ce966a9"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vale Pedágio]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="Float" x="1" y="403" width="231" height="1" uuid="1501cc37-1305-43ab-a874-5375df1c1a11"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="325" width="70" height="11" uuid="307ebce7-c383-4f2f-a32c-5ffb48d16f7e"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Placa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="325" width="70" height="11" uuid="e15cafce-69de-48c8-b4f5-759e6e2e993a"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RNTRC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="392" width="70" height="11" uuid="d9a8a2a8-dc4b-4afb-9424-f39523610532"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Responsável CNPJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="79" y="392" width="70" height="11" uuid="8e4153d4-046a-44e8-8e80-f7e8e8249cb4"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Fornecedor CNPJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="156" y="392" width="70" height="11" uuid="53946593-c788-4f4c-bd0d-3a9437d78ed7"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nº Comprovante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="289" width="59" height="15" uuid="b74af5ac-a075-46a0-a37f-2b4e13d6368a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Consulte em]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="289" width="231" height="15" uuid="6333624c-f36f-4fd2-b760-2229ae252a6d"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[https://dfe-portal.svrs.rs.gov.br/MDFe/consulta]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="338" width="83" height="12" uuid="da16ea0b-7e66-471f-9e91-80f424888ee9">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{veicTracao_placa}.substring(0,3) + "-" + $F{veicTracao_placa}.substring(3,7)]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="84" y="338" width="147" height="12" uuid="584f1636-93de-4f5e-a34c-8ddccd45cd85">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{rodo_infANTT_RNTRC} == null && $F{veicTracao_prop_RNTRC} == null ? "" :
+($F{rodo_infANTT_RNTRC} != null && $F{veicTracao_prop_RNTRC} == null ? $F{rodo_infANTT_RNTRC} :
+$F{rodo_infANTT_RNTRC} == null && $F{veicTracao_prop_RNTRC} != null ? $F{veicTracao_prop_RNTRC} :
+$F{rodo_infANTT_RNTRC} != null && $F{veicTracao_prop_RNTRC} != null ? $F{veicTracao_prop_RNTRC} :
+""))]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="350" width="231" height="1" uuid="48d71a1e-1727-4dc9-b70b-e057b5868749"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement x="1" y="278" width="250" height="30" uuid="6e60ea69-0975-46e8-85ed-1fbee2c1a8a6">
+					<printWhenExpression><![CDATA[($F{ide_tpAmb}.equals( "2" )) || ($F{ide_tpAmb}.equals( "1" ) && $F{protMDFe_infProt_nProt} == null)]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="245" height="29" backcolor="#000000" uuid="e758ec65-4f3b-4722-ae64-5174f00b558e"/>
+				</rectangle>
+				<textField>
+					<reportElement x="4" y="1" width="240" height="28" forecolor="#FFFFFF" uuid="ab43de45-ec6d-4547-bc9b-440698fe34e2"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(($F{ide_tpAmb}.equals( "2" )) || ($F{ide_tpAmb}.equals( "1" ) && $F{protMDFe_infProt_nProt} == null) ? "EMITIDO EM AMBIENTE DE HOMOLOGAÇÃO – SEM VALOR FISCAL" : "")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="1" y="278" width="250" height="30" uuid="01974637-0632-47ca-9df1-c74c87dc9356">
+					<printWhenExpression><![CDATA[$F{ide_tpEmis}.equals( "2" )]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="245" height="29" backcolor="#000000" uuid="54a18918-3230-48d9-963b-ea3feb0d2000">
+						<printWhenExpression><![CDATA[($F{ide_tpAmb}.equals( "2" )) || ($F{ide_tpAmb}.equals( "1" ) && $F{protMDFe_infProt_nProt} == null)]]></printWhenExpression>
+					</reportElement>
+				</rectangle>
+				<textField>
+					<reportElement x="124" y="14" width="118" height="12" forecolor="#FFFFFF" uuid="e7434d93-29f4-4c13-9a00-7977208cdfe0"/>
+					<textElement>
+						<font size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["(" + ($F{ide_dhEmi} != null ? new SimpleDateFormat("dd/MM/yyyy HH:mm").format(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse($F{ide_dhEmi})) : null) + ")"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="3" y="3" width="118" height="12" forecolor="#FFFFFF" uuid="957e40a7-3c3b-48e8-99b5-0172c7b2aeca"/>
+					<textElement>
+						<font size="8" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<text><![CDATA[EMISSÃO EM CONTINGÊNCIA.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="124" y="2" width="118" height="12" forecolor="#FFFFFF" uuid="ecd12ef8-e3c2-43d9-8435-8d46b4ace68a"/>
+					<textElement>
+						<font size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Obrigatória a autorização em]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="14" width="118" height="12" forecolor="#FFFFFF" uuid="2c7ec5b9-8165-4cce-85cf-c964d6a00ce2"/>
+					<textElement>
+						<font size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[168 horas após esta emissão]]></text>
+				</staticText>
+			</frame>
+			<componentElement>
+				<reportElement positionType="Float" x="1" y="405" width="231" height="14" uuid="df8306b4-4818-4301-801e-ab7a1adb448c"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="valePed" uuid="5d497a9b-4a24-4f2a-a50f-181c5d99d687">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/mdfeProc/MDFe/infMDFe/infModal/rodo/infANTT/valePed/disp")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="14" width="231">
+						<textField isBlankWhenNull="true">
+							<reportElement x="80" y="0" width="75" height="12" uuid="06f3213e-88f6-4c6b-840a-b122aa639869">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							</reportElement>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="Verdana" size="6" isBold="false"/>
+								<paragraph lineSpacing="Single"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{CNPJForn}.substring(0,2) + "." +
+$F{CNPJForn}.substring(2,5) + "." + $F{CNPJForn}.substring(5,8) + "/" +
+$F{CNPJForn}.substring(8,12) + "-" +$F{CNPJForn}.substring(12,14)]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="0" y="0" width="80" height="12" uuid="4c12ca5d-6628-435a-be17-a4cfac5839e5">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							</reportElement>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="Verdana" size="6" isBold="false"/>
+								<paragraph lineSpacing="Single"/>
+							</textElement>
+							<textFieldExpression><![CDATA[($F{CNPJPg} == null && $F{CPFPg} == null ? "" :
+$F{CNPJPg} != null ? $F{CNPJPg}.substring(0,2) + "." +
+$F{CNPJPg}.substring(2,5) + "." + $F{CNPJPg}.substring(5,8) + "/" +
+$F{CNPJPg}.substring(8,12) + "-" + $F{CNPJPg}.substring(12,14) :
+$F{CPFPg}.substring(0,3) + "." + $F{CPFPg}.substring(3,6) + "." +
+$F{CPFPg}.substring(6,9) + "-" + $F{CPFPg}.substring(9,11))]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="0" y="12" width="231" height="1" uuid="6c986605-083b-436e-9d0f-a8e54d911e01"/>
+							<graphicElement>
+								<pen lineWidth="0.5" lineStyle="Dashed"/>
+							</graphicElement>
+						</line>
+						<textField isBlankWhenNull="true">
+							<reportElement x="155" y="0" width="76" height="12" uuid="f3617c64-748c-4367-a895-8c729010d9a4">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							</reportElement>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="Verdana" size="6" isBold="false"/>
+								<paragraph lineSpacing="Single"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nCompra}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="1" y="351" width="231" height="13" uuid="8de67488-e63a-4b4c-a839-7b9b92a6c865"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="veic" uuid="37ae8791-3ad2-47a3-a7d1-8a95456c00e1">
+						<datasetParameter name="RNTRC_EMPRESA">
+							<datasetParameterExpression><![CDATA[$F{rodo_infANTT_RNTRC}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/mdfeProc/MDFe/infMDFe/infModal/rodo/veicReboque")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="13" width="231">
+						<textField isBlankWhenNull="true">
+							<reportElement x="84" y="0" width="145" height="12" uuid="ca0a1248-402e-4190-ba0e-b9db07d68579">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							</reportElement>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="Verdana" size="8" isBold="true"/>
+								<paragraph lineSpacing="Single"/>
+							</textElement>
+							<textFieldExpression><![CDATA[($P{RNTRC_EMPRESA} == null && $F{RNTRC} == null ? "" :
+($P{RNTRC_EMPRESA} != null && $F{RNTRC} == null ? $P{RNTRC_EMPRESA} :
+$P{RNTRC_EMPRESA} == null && $F{RNTRC} != null ? $F{RNTRC} :
+$P{RNTRC_EMPRESA} != null && $F{RNTRC} != null ? $F{RNTRC} :
+""))]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="1" y="0" width="83" height="12" uuid="baeae76b-5aa9-4e93-8e84-6e2ebbba8eb5">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							</reportElement>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="Verdana" size="8" isBold="true"/>
+								<paragraph lineSpacing="Single"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{placa}.substring(0,3) + "-" + $F{placa}.substring(3,7)]]></textFieldExpression>
+						</textField>
+						<line>
+							<reportElement x="1" y="12" width="229" height="1" uuid="5332901c-c8f8-4dfe-8c94-933c4794c7e1"/>
+							<graphicElement>
+								<pen lineWidth="0.5" lineStyle="Dashed"/>
+							</graphicElement>
+						</line>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<frame>
+				<reportElement x="261" y="308" width="292" height="44" uuid="6ba34bd9-8833-413a-99f7-06c207e59b2a"/>
+				<staticText>
+					<reportElement x="85" y="17" width="206" height="11" uuid="a63445a4-56ba-45d8-a919-2d17068484c5"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Nome]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="17" width="70" height="11" uuid="56b6b487-e15a-4cd4-89a8-5e1c178309ae"/>
+					<textElement>
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[CPF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="292" height="15" uuid="7f9c99f0-bda4-4a30-a086-ab1721cac144"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Condutor]]></text>
+				</staticText>
+				<componentElement>
+					<reportElement x="0" y="30" width="292" height="13" uuid="eb2808a8-f4ce-4ac9-bfa5-83f042be3e4e"/>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="true">
+						<datasetRun subDataset="condutor" uuid="21bb5ced-4f87-46c7-b598-e8d2ddb27bb3">
+							<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/mdfeProc/MDFe/infMDFe/infModal/rodo/veicTracao/condutor")]]></dataSourceExpression>
+						</datasetRun>
+						<jr:listContents height="13" width="292">
+							<textField>
+								<reportElement x="0" y="0" width="84" height="12" uuid="f70780a7-4ebb-4ab7-b48e-3bb15fceb535"/>
+								<textElement>
+									<font size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CPF}.substring(0,3) + "." + $F{CPF}.substring(3,6) + "." + $F{CPF}.substring(6,9) + "-" + $F{CPF}.substring(9,11)]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="84" y="0" width="208" height="12" uuid="1ff397a5-c614-4d4a-bce9-bb09bcfe4099"/>
+								<textElement>
+									<font size="8" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{xNome}]]></textFieldExpression>
+							</textField>
+							<line>
+								<reportElement x="1" y="12" width="288" height="1" uuid="a6860cc0-cdde-436a-9a74-9456d3070fa1"/>
+								<graphicElement>
+									<pen lineWidth="0.5" lineStyle="Dashed"/>
+								</graphicElement>
+							</line>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+				<line>
+					<reportElement x="0" y="28" width="288" height="1" uuid="f4f8ce73-e6e3-49c7-aece-5dac8338da80"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32">
+			<printWhenExpression><![CDATA[$F{ide_tpEmis}.equals("2")]]></printWhenExpression>
+			<staticText>
+				<reportElement x="1" y="0" width="244" height="15" uuid="486ed323-27e6-4f41-8e37-09c65cbea2a7"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informações da Composição da Carga]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="15" width="550" height="1" uuid="a447851d-10ab-4cbf-84ad-6da185581726"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="18" width="242" height="12" uuid="101c4fcd-a056-4df9-9533-9a181beb3bcb"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informações dos documentos fiscais vinculados ao manifesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="18" width="150" height="12" uuid="837618ec-7de9-4687-9307-c6bb474dfbda"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informações da unidade de transporte]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="18" width="150" height="12" uuid="712b5b1d-db1e-4e40-bce1-4bd1dc6ea1aa"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informações da unidade de carga]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="31" width="550" height="1" uuid="19377f91-efd1-4bc8-a4c0-135072fb50d2"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="12">
+			<printWhenExpression><![CDATA[$F{ide_tpEmis}.equals("2")]]></printWhenExpression>
+			<componentElement>
+				<reportElement x="0" y="0" width="553" height="12" uuid="455b3cf8-421f-4ac6-9b2b-715f2c77d078"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="infNFe" uuid="e02d2b34-fbcc-46d9-8af9-d7a6429ce567">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/mdfeProc/MDFe/infMDFe/infDoc/infMunDescarga/infNFe")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="12" width="553">
+						<textField>
+							<reportElement x="0" y="0" width="220" height="12" uuid="22144f27-e957-4aaa-80ff-765f0bc38cad"/>
+							<textElement>
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA["NFe  -  " + $F{chNFe}.substring(0,4) + " " + $F{chNFe}.substring(4,8) + " " + $F{chNFe}.substring(8,12) + " " +
+$F{chNFe}.substring(12,16) + " " + $F{chNFe}.substring(16,20) + " " + $F{chNFe}.substring(20,24) + " " +
+$F{chNFe}.substring(24,28) + " " + $F{chNFe}.substring(28,32) + " " + $F{chNFe}.substring(32,36) + " " +
+$F{chNFe}.substring(36,40) + " " + $F{chNFe}.substring(40,44) + " "]]></textFieldExpression>
+						</textField>
+						<componentElement>
+							<reportElement x="250" y="0" width="303" height="12" uuid="d63cdd9f-6e3b-4292-a474-198fd9458759"/>
+							<jr:list printOrder="Vertical">
+								<datasetRun subDataset="infUnidTransp" uuid="98e90592-640b-4705-b6d0-978fbf7dd998">
+									<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/infNFe/infUnidTransp")]]></dataSourceExpression>
+								</datasetRun>
+								<jr:listContents height="12" width="303">
+									<textField>
+										<reportElement x="0" y="0" width="150" height="12" uuid="75bba584-ea44-484a-b506-2d407904a5ee"/>
+										<textElement>
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[($F{tpUnidTransp}.equals("1") ? "Rodoviário Tração" : ($F{tpUnidTransp}.equals("2") ? "Rodoviário Reboque" : ($F{tpUnidTransp}.equals("3") ? "Navio" : ($F{tpUnidTransp}.equals("4") ? "Balsa" : ($F{tpUnidTransp}.equals("5") ? "Aeronave" : ($F{tpUnidTransp}.equals("6") ? "Vagão" : ($F{tpUnidTransp}.equals("7") ? "Outros" : "Outros")))))))]]></textFieldExpression>
+									</textField>
+									<componentElement>
+										<reportElement x="152" y="0" width="145" height="12" uuid="5914a66d-5b15-4bac-a30b-1ea0ad8e0964"/>
+										<jr:list printOrder="Vertical">
+											<datasetRun subDataset="infUnidCarga" uuid="381664e7-a5c4-4d09-be91-37205c2f576b">
+												<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/infUnidTransp/infUnidCarga")]]></dataSourceExpression>
+											</datasetRun>
+											<jr:listContents height="12" width="145">
+												<textField>
+													<reportElement x="0" y="0" width="145" height="11" uuid="9a8307ec-8b71-4035-81ed-17c9409937a8"/>
+													<textElement>
+														<font size="8"/>
+													</textElement>
+													<textFieldExpression><![CDATA[($F{tpUnidCarga}.equals("1") ? "Container" : ($F{tpUnidCarga}.equals("2") ? "ULD" : ($F{tpUnidCarga}.equals("3") ? "Outros" : "Outros")))]]></textFieldExpression>
+												</textField>
+											</jr:listContents>
+										</jr:list>
+									</componentElement>
+								</jr:listContents>
+							</jr:list>
+						</componentElement>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="12">
+			<printWhenExpression><![CDATA[$F{ide_tpEmis}.equals("2")]]></printWhenExpression>
+			<componentElement>
+				<reportElement x="0" y="0" width="553" height="12" uuid="77bf4f7b-5db8-4568-a12f-787f5e71119e"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="infCTe" uuid="4fa8e873-f14b-4bcf-8839-d96681cd3862">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/mdfeProc/MDFe/infMDFe/infDoc/infMunDescarga/infCTe")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="12" width="553">
+						<textField>
+							<reportElement x="0" y="0" width="220" height="12" uuid="8b71b154-bf67-48ad-8f90-cbb9b747f5fb"/>
+							<textElement>
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA["CTe  -  " + $F{chCTe}.substring(0,4) + " " + $F{chCTe}.substring(4,8) + " " + $F{chCTe}.substring(8,12) + " " +
+$F{chCTe}.substring(12,16) + " " + $F{chCTe}.substring(16,20) + " " + $F{chCTe}.substring(20,24) + " " +
+$F{chCTe}.substring(24,28) + " " + $F{chCTe}.substring(28,32) + " " + $F{chCTe}.substring(32,36) + " " +
+$F{chCTe}.substring(36,40) + " " + $F{chCTe}.substring(40,44) + " "]]></textFieldExpression>
+						</textField>
+						<componentElement>
+							<reportElement x="250" y="0" width="303" height="12" uuid="2405b90f-5940-4c9a-b23d-ec0007078999"/>
+							<jr:list printOrder="Vertical">
+								<datasetRun subDataset="infUnidTransp" uuid="e9ffa128-8fb2-49cc-a86a-3eaa0e308f6a">
+									<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/infCTe/infUnidTransp")]]></dataSourceExpression>
+								</datasetRun>
+								<jr:listContents height="12" width="303">
+									<textField>
+										<reportElement x="0" y="0" width="150" height="12" uuid="189b9104-c32e-434c-b4cf-ca06de718408"/>
+										<textElement>
+											<font size="8"/>
+										</textElement>
+										<textFieldExpression><![CDATA[($F{tpUnidTransp}.equals("1") ? "Rodoviário Tração" : ($F{tpUnidTransp}.equals("2") ? "Rodoviário Reboque" : ($F{tpUnidTransp}.equals("3") ? "Navio" : ($F{tpUnidTransp}.equals("4") ? "Balsa" : ($F{tpUnidTransp}.equals("5") ? "Aeronave" : ($F{tpUnidTransp}.equals("6") ? "Vagão" : ($F{tpUnidTransp}.equals("7") ? "Outros" : "Outros")))))))]]></textFieldExpression>
+									</textField>
+									<componentElement>
+										<reportElement x="152" y="0" width="145" height="12" uuid="d14e67f7-661b-4385-9582-b2766ba892f6"/>
+										<jr:list printOrder="Vertical">
+											<datasetRun subDataset="infUnidCarga" uuid="d07df051-0fa3-4280-8518-37c59406a3f5">
+												<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/infUnidTransp/infUnidCarga")]]></dataSourceExpression>
+											</datasetRun>
+											<jr:listContents height="12" width="145">
+												<textField>
+													<reportElement x="0" y="0" width="145" height="11" uuid="21e5f5af-84d1-461d-83e5-4c64dc82d903"/>
+													<textElement>
+														<font size="8"/>
+													</textElement>
+													<textFieldExpression><![CDATA[($F{tpUnidCarga}.equals("1") ? "Container" : ($F{tpUnidCarga}.equals("2") ? "ULD" : ($F{tpUnidCarga}.equals("3") ? "Outros" : "Outros")))]]></textFieldExpression>
+												</textField>
+											</jr:listContents>
+										</jr:list>
+									</componentElement>
+								</jr:listContents>
+							</jr:list>
+						</componentElement>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="141" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="228" height="15" uuid="8123aa25-1f0b-44ad-bad7-b2a278adcbfa"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observações]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="15" width="550" height="1" uuid="0196d0a2-6a66-493b-9744-38c7ee0d5fa4"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement key="informacoesCpl" stretchType="RelativeToTallestObject" x="0" y="18" width="550" height="112" uuid="05314433-b6ba-49b1-8755-8b6058855bbf">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="net.sf.jasperreports.print.keep.full.text" value="true"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box bottomPadding="2"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Courier New" size="6" isBold="true" isItalic="false"/>
+					<paragraph lineSpacing="Fixed" lineSpacingSize="4.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{infAdic_infCpl}.replaceAll(";", "\n")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="130" width="103" height="8" uuid="74e276f6-fcfc-4d2e-9b09-09b467bebbed"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ide_verProc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

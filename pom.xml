@@ -196,7 +196,7 @@
                 <executions>
                     <execution>
                         <id>exec-install-file</id>
-                        <phase>install</phase>
+                        <phase>package</phase>
                         <goals>
                             <goal>exec</goal>
                         </goals>

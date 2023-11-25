@@ -5,11 +5,7 @@ import net.sf.jasperreports.engine.JRException;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class TesteImpressaoNFe {
 
@@ -20,10 +16,6 @@ public class TesteImpressaoNFe {
 
             //Aqui está pegando o Layout Padrão
             Impressao impressao = ImpressaoUtil.impressaoPadraoNFe(xml);
-
-            //Adiciona Logo Personalizada
-            File logoPersonalizada = new File("logoNFe.png");
-            impressao.getParametros().put("Logo", Files.newInputStream(Paths.get(logoPersonalizada.getPath())));
 
             //Faz a impressão em pdf File
             impressaoPdfArquivo(impressao);

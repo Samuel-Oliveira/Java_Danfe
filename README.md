@@ -1,4 +1,4 @@
-# Java-Danfe [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java_Danfe.svg) ](https://github.com/Samuel-Oliveira/Java_Danfe/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-danfe.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-danfe/1.5/jar)
+# Java-Danfe [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java_Danfe.svg) ](https://github.com/Samuel-Oliveira/Java_Danfe/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-danfe.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-danfe/1.6/jar)
 Biblioteca para impressão de Documentos Fiscais
 
 ## Dúvidas, Sugestões ou Consultoria
@@ -8,14 +8,14 @@ Biblioteca para impressão de Documentos Fiscais
 <img src="https://swconsultoria.com.br/pix.png" width="200">
 
 Para Iniciar : 
-- Caso use Libs baixe o java-danfe-1.5.jar (https://github.com/Samuel-Oliveira/Java_Danfe/raw/master/java-danfe-1.5.jar) e o adicione às bibliotecas de Seu Projeto.
+- Caso use Libs baixe o java-danfe-1.6.jar (https://github.com/Samuel-Oliveira/Java_Danfe/raw/master/java-danfe-1.6.jar) e o adicione às bibliotecas de Seu Projeto.
 
 - Maven :
 ```xml
 <dependency>
     <groupId>br.com.swconsultoria</groupId>
     <artifactId>java-danfe</artifactId>
-    <version>1.5</version>
+    <version>1.6</version>
 </dependency>
 ```
 
@@ -27,7 +27,7 @@ repositories {
     }
 }
 dependencies {
-    implementation "br.com.swconsultoria:java-danfe:1.5"
+    implementation "br.com.swconsultoria:java-danfe:1.6"
 }
 ```
 
@@ -36,6 +36,12 @@ Veja a Wiki https://github.com/Samuel-Oliveira/Java_Danfe/wiki, para ter um Tuto
 ________________________________________________________________________________________________
 
 # Histórico de Versões
+
+## v1.6 25/11/2023
+- Correção de Jaspers
+- Alteração de Valores errados CTe
+- Alterado Logotipos padroes
+- Implementado MDFe
 
 ## v1.5 03/11/2023
 - Alterado inputStream para JasperReport

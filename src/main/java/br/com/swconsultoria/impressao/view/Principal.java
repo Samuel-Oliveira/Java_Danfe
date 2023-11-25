@@ -26,7 +26,7 @@ package br.com.swconsultoria.impressao.view;
 import br.com.swconsultoria.impressao.model.Impressao;
 import br.com.swconsultoria.impressao.service.ImpressaoService;
 import br.com.swconsultoria.impressao.util.ImpressaoUtil;
-import br.com.swconsultoria.impressao.util.Prefs;
+import br.com.swconsultoria.impressao.util.PreferencesUtil;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.extras.FlatAnimatedLafChange;
@@ -106,7 +106,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Esta biblioteca tem como propósito facilitar a impressão dos documentos NF-e, NFC-e e CT-e.");
+        jLabel2.setText("Esta biblioteca tem como propósito facilitar a impressão dos documentos NF-e, NFC-e, CT-e e MDFe.");
 
         jbTema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Paint Roller.png"))); // NOI18N
         jbTema.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -133,7 +133,8 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jcbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NFe - Nota Fiscal Eletrônica", "NFCe - Nota Fiscal Consumidor Eletrônica", "CTe - Conhecimento de Transporte Eletrônico" }));
+        jcbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NFe - Nota Fiscal Eletrônica", "NFCe - Nota Fiscal Consumidor Eletrônica",
+                "CTe - Conhecimento de Transporte Eletrônico", "MDFe - Manifesto Eletronico de Documentos Fiscais" }));
         jcbTipo.setFocusable(false);
         jcbTipo.setMinimumSize(new java.awt.Dimension(300, 35));
         jcbTipo.setPreferredSize(new java.awt.Dimension(300, 35));
@@ -239,7 +240,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbGithubActionPerformed
 
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
-        String ultimaPasta = Prefs.getState().get(Prefs.LAST_FOLDER, FileSystemView.getFileSystemView().getHomeDirectory().getPath());
+        String ultimaPasta = PreferencesUtil.getState().get(PreferencesUtil.LAST_FOLDER, FileSystemView.getFileSystemView().getHomeDirectory().getPath());
         JFileChooser fileChooser = new JFileChooser(ultimaPasta);
         FileFilter filter = new FileFilter() {
             @Override
@@ -257,7 +258,7 @@ public class Principal extends javax.swing.JFrame {
 
         if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             File arquivoSelecionado = fileChooser.getSelectedFile();
-            Prefs.getState().put(Prefs.LAST_FOLDER, arquivoSelecionado.getParent());
+            PreferencesUtil.getState().put(PreferencesUtil.LAST_FOLDER, arquivoSelecionado.getParent());
             visualizar(arquivoSelecionado);
         }
     }//GEN-LAST:event_jbBuscarActionPerformed
@@ -277,6 +278,10 @@ public class Principal extends javax.swing.JFrame {
                     impressao = ImpressaoUtil.impressaoPadraoCTe(xml);
                     break;
                 }
+                case 3: {
+                    impressao = ImpressaoUtil.impressaoPadraoMDFe(xml);
+                    break;
+                }
                 default: {
                     impressao = ImpressaoUtil.impressaoPadraoNFe(xml);
                     break;
@@ -284,7 +289,7 @@ public class Principal extends javax.swing.JFrame {
             }
 
             if (jcbSalvarPDF.isSelected()) {
-                String ultimaPasta = Prefs.getState().get(Prefs.LAST_FOLDER, FileSystemView.getFileSystemView().getHomeDirectory().getPath());
+                String ultimaPasta = PreferencesUtil.getState().get(PreferencesUtil.LAST_FOLDER, FileSystemView.getFileSystemView().getHomeDirectory().getPath());
                 JFileChooser fileChooser = new JFileChooser(ultimaPasta);
                 int result = fileChooser.showSaveDialog(this);
 
@@ -350,7 +355,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void alterarTema() {
         if (!FlatLaf.isLafDark()) {
-            Prefs.getState().put(Prefs.THEME, "escuro");
+            PreferencesUtil.getState().put(PreferencesUtil.THEME, "escuro");
             EventQueue.invokeLater(() -> {
                 FlatAnimatedLafChange.showSnapshot();
                 FlatMacDarkLaf.setup();
@@ -358,7 +363,7 @@ public class Principal extends javax.swing.JFrame {
                 FlatAnimatedLafChange.hideSnapshotWithAnimation();
             });
         } else {
-            Prefs.getState().put(Prefs.THEME, "claro");
+            PreferencesUtil.getState().put(PreferencesUtil.THEME, "claro");
             EventQueue.invokeLater(() -> {
                 FlatAnimatedLafChange.showSnapshot();
                 FlatMacLightLaf.setup();
@@ -369,11 +374,11 @@ public class Principal extends javax.swing.JFrame {
     }
 
     public static void main(String args[]) {
-        Prefs.init("/Java-Danfe");
+        PreferencesUtil.init("/Java-Danfe");
 
         FlatLaf.registerCustomDefaultsSource("theme");
 
-        String tema = Prefs.getState().get(Prefs.THEME, "escuro");
+        String tema = PreferencesUtil.getState().get(PreferencesUtil.THEME, "escuro");
 
         if ("claro".equals(tema)) {
             FlatMacLightLaf.setup();
