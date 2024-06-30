@@ -83,11 +83,12 @@ public class Principal extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jbBuscar = new javax.swing.JButton();
         jcbSalvarPDF = new javax.swing.JCheckBox();
+        jcbEnviarImpressaoDireta = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Java-Danfe");
-        setMinimumSize(new java.awt.Dimension(600, 325));
-        setPreferredSize(new java.awt.Dimension(600, 325));
+        setMinimumSize(new java.awt.Dimension(641, 338));
+        setPreferredSize(new java.awt.Dimension(641, 338));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(18, 22, 18, 22));
 
@@ -106,7 +107,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Esta biblioteca tem como propósito facilitar a impressão dos documentos NF-e, NFC-e, CT-e e MDFe.");
+        jLabel2.setText("Esta biblioteca tem como propósito facilitar a impressão dos documentos NF-e, NFC-e e CT-e.");
 
         jbTema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Paint Roller.png"))); // NOI18N
         jbTema.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -133,8 +134,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jcbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NFe - Nota Fiscal Eletrônica", "NFCe - Nota Fiscal Consumidor Eletrônica",
-                "CTe - Conhecimento de Transporte Eletrônico", "MDFe - Manifesto Eletronico de Documentos Fiscais" }));
+        jcbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NFe - Nota Fiscal Eletrônica", "NFCe - Nota Fiscal Consumidor Eletrônica", "CTe - Conhecimento de Transporte Eletrônico" }));
         jcbTipo.setFocusable(false);
         jcbTipo.setMinimumSize(new java.awt.Dimension(300, 35));
         jcbTipo.setPreferredSize(new java.awt.Dimension(300, 35));
@@ -153,8 +153,11 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jcbSalvarPDF.setText("Salvar PDF");
+        jcbSalvarPDF.setText("Marque aqui para salvar um PDF do XML após seleciona-lo.");
         jcbSalvarPDF.setPreferredSize(new java.awt.Dimension(85, 35));
+
+        jcbEnviarImpressaoDireta.setText("Enviar impressão direta após selecionar xml.");
+        jcbEnviarImpressaoDireta.setPreferredSize(new java.awt.Dimension(85, 35));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -163,7 +166,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 591, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jbDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -179,11 +182,11 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jcbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jcbSalvarPDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 36, Short.MAX_VALUE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jcbSalvarPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcbEnviarImpressaoDireta, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,9 +202,12 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jcbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcbSalvarPDF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 37, Short.MAX_VALUE)
+                    .addComponent(jbBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jcbSalvarPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jcbEnviarImpressaoDireta, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbDoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -286,6 +292,10 @@ public class Principal extends javax.swing.JFrame {
                     impressao = ImpressaoUtil.impressaoPadraoNFe(xml);
                     break;
                 }
+            }
+            
+            if (jcbEnviarImpressaoDireta.isSelected()) {
+                ImpressaoService.impressaoDireta(impressao);
             }
 
             if (jcbSalvarPDF.isSelected()) {
@@ -401,6 +411,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jbDoc;
     private javax.swing.JButton jbGithub;
     private javax.swing.JButton jbTema;
+    private javax.swing.JCheckBox jcbEnviarImpressaoDireta;
     private javax.swing.JCheckBox jcbSalvarPDF;
     private javax.swing.JComboBox<String> jcbTipo;
     // End of variables declaration//GEN-END:variables
