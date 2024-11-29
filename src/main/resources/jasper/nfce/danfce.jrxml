@@ -439,6 +439,9 @@ $F{tPag}.equals("10")?"   Vale Alimentação":
 $F{tPag}.equals("11")?"   Vale Refeição":
 $F{tPag}.equals("12")?"   Vale Presente":
 $F{tPag}.equals("13")?"   Vale Combustível":
+$F{tPag}.equals("17")?"   Pix Dinâmico":
+$F{tPag}.equals("20")?"   Pix Estático":
+$F{tPag}.equals("21")?"   Crédito Loja":
 "   Outros"]]></textFieldExpression>
 								</textField>
 								<staticText>
