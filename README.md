@@ -1,4 +1,4 @@
-# Java-Danfe [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java_Danfe.svg) ](https://github.com/Samuel-Oliveira/Java_Danfe/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-danfe.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-danfe/1.7/jar)
+# Java-Danfe [![MIT License](https://img.shields.io/github/license/Samuel-Oliveira/Java_Danfe.svg) ](https://github.com/Samuel-Oliveira/Java_Danfe/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/br.com.swconsultoria/java-danfe.svg?label=Maven%20Central)](https://search.maven.org/artifact/br.com.swconsultoria/java-danfe/1.8/jar)
 Biblioteca para impressão de Documentos Fiscais
 
 ## Dúvidas, Sugestões ou Consultoria
@@ -8,14 +8,14 @@ Biblioteca para impressão de Documentos Fiscais
 <img src="https://swconsultoria.com.br/pix.png" width="200">
 
 Para Iniciar : 
-- Caso use Libs baixe o java-danfe-1.7.jar (https://github.com/Samuel-Oliveira/Java_Danfe/raw/master/java-danfe-1.7.jar) e o adicione às bibliotecas de Seu Projeto.
+- Caso use Libs baixe o java-danfe-1.8.jar (https://github.com/Samuel-Oliveira/Java_Danfe/raw/master/java-danfe-1.8.jar) e o adicione às bibliotecas de Seu Projeto.
 
 - Maven :
 ```xml
 <dependency>
     <groupId>br.com.swconsultoria</groupId>
     <artifactId>java-danfe</artifactId>
-    <version>1.7</version>
+    <version>1.8</version>
 </dependency>
 ```
 
@@ -27,7 +27,7 @@ repositories {
     }
 }
 dependencies {
-    implementation "br.com.swconsultoria:java-danfe:1.7"
+    implementation "br.com.swconsultoria:java-danfe:1.8"
 }
 ```
 
@@ -36,6 +36,9 @@ Veja a Wiki https://github.com/Samuel-Oliveira/Java_Danfe/wiki, para ter um Tuto
 ________________________________________________________________________________________________
 
 # Histórico de Versões
+
+## v1.8 11/12/2024
+- Adicionado Impressao CCE NFe
 
 ## v1.7 30/11/2024
 - Adicionado PIX as descricoes de forma de pagamento NFCe
