@@ -14,7 +14,8 @@ public enum JasperEnum {
     CTE_DOC_NFE("/cte/subreport/DACTE_sub_documentos_originarios_nfe"),
     CTE_DOC_OUTROS("/cte/subreport/DACTE_sub_documentos_originarios_outros"),
     CTE_VEICULOS("/cte/subreport/DACTE_sub_veiculos_novos"),
-    MDFE("/mdfe/damdfe");
+    MDFE("/mdfe/damdfe"),
+    CCE("/cce/cce");
 
     private final String caminho;
 
