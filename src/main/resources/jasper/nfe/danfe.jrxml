@@ -1925,5 +1925,3 @@ $V{PAGE_NUMBER} == 1 && (
 		</band>
 	</pageFooter>
 </jasperReport>
-eFooter>
-</jasperReport>
