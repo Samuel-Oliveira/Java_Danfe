@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DanfeNFCe" printOrder="Horizontal" pageWidth="208" pageHeight="792" columnWidth="200" leftMargin="4" rightMargin="4" topMargin="0" bottomMargin="4" isIgnorePagination="true" uuid="2ee59f2c-90ef-45b6-820e-6d2b3ab6db90">
 	<property name="ireport.zoom" value="3.0"/>
 	<property name="ireport.x" value="0"/>
@@ -604,7 +604,7 @@ $F{chaveAcesso}.substring(43,47)]]></textFieldExpression>
          com.google.zxing.BarcodeFormat.QR_CODE, 400, 400))]]></imageExpression>
 				</image>
 				<textField pattern="" isBlankWhenNull="true">
-					<reportElement key="textField-26" mode="Transparent" x="101" y="2" width="99" height="9" uuid="1234e498-c45a-486f-8dfe-fe7c6ef5cd07"/>
+					<reportElement key="textField-26" mode="Transparent" x="101" y="-1" width="99" height="12" uuid="1234e498-c45a-486f-8dfe-fe7c6ef5cd07"/>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="SansSerif" size="7" isBold="true"/>
 					</textElement>
