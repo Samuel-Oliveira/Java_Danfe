@@ -1367,9 +1367,19 @@ $F{Chave}.substring(36,40) + " " + $F{Chave}.substring(40,44) + " "]]></textFiel
 					<textElement textAlignment="Center">
 						<font size="7" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{Emi_Telefone}.length() == 8 ? "FONE: " + $F{Emi_Telefone}.substring(0,4) +
-"-" + $F{Emi_Telefone}.substring(4,8) : "FONE: (" + $F{Emi_Telefone}.substring(0,2) + ") " +
-$F{Emi_Telefone}.substring(2,6) + "-" + $F{Emi_Telefone}.substring(6,10)]]></textFieldExpression>
+					<textFieldExpression><![CDATA[($F{Emi_Telefone} == null || $F{Emi_Telefone}.replaceAll("[^0-9]", "").isEmpty()) ? 
+    "" : 
+(
+    ($F{Emi_Telefone}.replaceAll("[^0-9]", "").length() == 8) ?
+        "FONE: " + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(0, 4) + "-" + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(4, 8) :
+    ($F{Emi_Telefone}.replaceAll("[^0-9]", "").length() == 9) ?
+        "FONE: " + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(0, 1) + " " + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(1, 5) + "-" + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(5, 9) :
+    ($F{Emi_Telefone}.replaceAll("[^0-9]", "").length() == 10) ?
+        "FONE: (" + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(0, 2) + ") " + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(2, 6) + "-" + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(6, 10) :
+    ($F{Emi_Telefone}.replaceAll("[^0-9]", "").length() == 11) ?
+        "FONE: (" + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(0, 2) + ") " + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(2, 3) + " " + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(3, 7) + "-" + $F{Emi_Telefone}.replaceAll("[^0-9]", "").substring(7, 11) :
+        "FONE: " + $F{Emi_Telefone}.replaceAll("[^0-9]", "")
+)]]></textFieldExpression>
 				</textField>
 				<textField textAdjust="StretchHeight" pattern="dd/MM/yyyy HH:mm:ss">
 					<reportElement style="dados" positionType="Float" x="454" y="103" width="109" height="16" isPrintInFirstWholeBand="true" uuid="94e62645-5088-47f1-ba93-ae6047b045f3"/>
