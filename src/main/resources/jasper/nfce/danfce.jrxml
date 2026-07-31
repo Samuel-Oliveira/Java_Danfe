@@ -117,6 +117,9 @@
 		<field name="troco" class="java.lang.String">
 			<fieldDescription><![CDATA[../vTroco]]></fieldDescription>
 		</field>
+		<field name="despesasAcessorias" class="java.lang.String">
+			<fieldDescription><![CDATA[/nfeProc/NFe/infNFe/total/ICMSTot/vOutro]]></fieldDescription>
+		</field>
 		<variable name="totalPag" class="java.lang.Double" calculation="Sum">
 			<variableExpression><![CDATA[new Double($F{vPag})]]></variableExpression>
 		</variable>
@@ -368,7 +371,7 @@
 							<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("//detPag")]]></dataSourceExpression>
 						</datasetRun>
 						<jr:column width="199" uuid="78adbb49-fe79-419d-9e94-b01a8abb5ac0">
-							<jr:tableFooter height="17" rowSpan="1">
+							<jr:tableFooter height="25" rowSpan="1">
 								<staticText>
 									<reportElement key="" x="137" y="0" width="9" height="9" uuid="32bb21cf-83e9-4ed9-bd0c-1288d5e28f8a">
 										<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -418,6 +421,31 @@
 										<font fontName="Arial" size="7" isBold="true"/>
 									</textElement>
 									<textFieldExpression><![CDATA[$F{troco} == null ? new Double("0.00") : $F{troco}]]></textFieldExpression>
+								</textField>
+								<staticText>
+									<reportElement key="" x="0" y="16" width="106" height="9" uuid="c1f9a7e2-4b3d-4f8a-9c2e-7d5b8e1a6f30"/>
+									<textElement verticalAlignment="Middle">
+										<font fontName="Arial" size="7" isBold="false"/>
+									</textElement>
+									<text><![CDATA[   Despesas Acessórias]]></text>
+								</staticText>
+								<staticText>
+									<reportElement key="" x="137" y="16" width="9" height="9" uuid="d2e8b6f3-5c4e-4a9b-8d1f-8e6c9f2b7a41">
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									</reportElement>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font fontName="Arial" size="7" isBold="false"/>
+									</textElement>
+									<text><![CDATA[R$]]></text>
+								</staticText>
+								<textField pattern="#,##0.00" isBlankWhenNull="true">
+									<reportElement key="" mode="Transparent" x="146" y="16" width="53" height="9" uuid="e3f9c7a4-6d5f-4b8c-9e2a-9f7d8a3c8b52">
+										<property name="com.jaspersoft.studio.unit.x" value="px"/>
+									</reportElement>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font fontName="Arial" size="7" isBold="false"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{despesasAcessorias} == null ? new Double("0.00") : new Double($F{despesasAcessorias})]]></textFieldExpression>
 								</textField>
 							</jr:tableFooter>
 							<jr:detailCell height="9" rowSpan="1">
@@ -543,7 +571,7 @@ $F{tPag}.equals("21")?"   Crédito Loja":
 				</line>
 			</band>
 			<band height="25">
-				<textField pattern="" isBlankWhenNull="true">
+				<textField pattern="" isBlankWhenNull="true" textAdjust="StretchHeight">
 					<reportElement key="textField-19" mode="Transparent" x="1" y="16" width="198" height="9" uuid="5b1b6a1d-b935-4534-81ac-e691e29920a7">
 						<property name="local_mesure_unitheight" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
